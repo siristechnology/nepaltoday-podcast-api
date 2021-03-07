@@ -454,7 +454,7 @@
 			{
 				"url": "https://baahrakhari.com/Cartoon",
 				"category": "cartoon",
-				"link-selector": "#content .left-side.baahrakhari-left.left-detail-page > section.section.breaking-news a"
+				"link-selector": "#content .left-detail-page > .breaking-news .items.feat-img > a"
 			}
 		],
 		"article-detail-selectors": {
