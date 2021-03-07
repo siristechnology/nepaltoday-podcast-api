@@ -6,7 +6,7 @@ const TrendingTwitterHandles = [
 		handle: '@brb1954',
 		image: 'https://pbs.twimg.com/profile_images/2728978795/b13bbaf361366a8d54a7d54124243593_400x400.jpeg',
 		searchTerms: ['Baburam Bhattarai'],
-		newsCategories: ['news', 'headline', 'politics']
+		newsCategories: ['news', 'headline', 'politics'],
 	},
 	{
 		name: 'KP Sharma Oli',
@@ -15,7 +15,7 @@ const TrendingTwitterHandles = [
 		handle: '@PM_Nepal',
 		image: 'https://pbs.twimg.com/profile_images/964093929002946560/RrZvsn_9_400x400.jpg',
 		searchTerms: ['KP Oli', 'PM Oli', 'KP Sharma Oli'],
-		newsCategories: ['headline', 'politics', 'news']
+		newsCategories: ['headline', 'politics', 'news'],
 	},
 	{
 		name: 'Sher Bahadur Deuba',
@@ -24,7 +24,7 @@ const TrendingTwitterHandles = [
 		handle: '@DeubaSherbdr',
 		image: 'https://pbs.twimg.com/profile_images/1044510739082313728/34oiYMBc_400x400.jpg',
 		searchTerms: ['Sher Bahadur Deuba'],
-		newsCategories: ['headline', 'politics', 'news']
+		newsCategories: ['headline', 'politics', 'news'],
 	},
 	{
 		name: 'Gagan Thapa',
@@ -33,7 +33,7 @@ const TrendingTwitterHandles = [
 		handle: '@thapagk',
 		image: 'https://pbs.twimg.com/profile_images/1294237288390512640/RktZchMv_200x200.jpg',
 		searchTerms: ['Gagan Thapa'],
-		newsCategories: ['headline', 'politics', 'news']
+		newsCategories: ['headline', 'politics', 'news'],
 	},
 	{
 		name: 'Rajendra Lingden',
@@ -42,7 +42,7 @@ const TrendingTwitterHandles = [
 		handle: '@RajendraLingden',
 		image: 'https://pbs.twimg.com/profile_images/807137128832348161/B8-eE7-z_reasonably_small.jpg',
 		searchTerms: ['Rajendra Lingden'],
-		newsCategories: ['headline', 'politics', 'news']
+		newsCategories: ['headline', 'politics', 'news'],
 	},
 	{
 		name: 'Kamal Thapa',
@@ -51,7 +51,7 @@ const TrendingTwitterHandles = [
 		handle: '@KTnepal',
 		searchTerms: ['Kamal Thapa'],
 		image: 'https://pbs.twimg.com/profile_images/1109620803962851328/kLFiAf4Z_400x400.jpg',
-		newsCategories: ['headline', 'politics', 'news']
+		newsCategories: ['headline', 'politics', 'news'],
 	},
 	{
 		name: 'Yogesh Bhattarai',
@@ -60,7 +60,7 @@ const TrendingTwitterHandles = [
 		handle: '@yogesbhattarai',
 		searchTerms: ['Yogesh Bhattarai'],
 		image: 'https://pbs.twimg.com/profile_images/1245999832147193856/lSej4wlJ_200x200.jpg',
-		newsCategories: ['headline', 'politics', 'news']
+		newsCategories: ['headline', 'politics', 'news'],
 	},
 	{
 		name: 'Pradeep Gyawali',
@@ -69,7 +69,7 @@ const TrendingTwitterHandles = [
 		handle: '@PradeepgyawaliK',
 		searchTerms: ['Pradeep Gyawali'],
 		image: 'https://pbs.twimg.com/profile_images/1114561242226667523/J74c_baG_200x200.jpg',
-		newsCategories: ['headline', 'politics', 'news']
+		newsCategories: ['headline', 'politics', 'news'],
 	},
 	{
 		name: 'Basanta Chaudhary',
@@ -78,7 +78,7 @@ const TrendingTwitterHandles = [
 		handle: '@basant_cg',
 		searchTerms: ['Basanta Chaudhary'],
 		image: 'https://pbs.twimg.com/profile_images/1286237855614775297/uADJ2v4U_200x200.jpg',
-		newsCategories: ['headline', 'politics', 'news']
+		newsCategories: ['headline', 'politics', 'news'],
 	},
 	{
 		name: 'Rabindra Mishra',
@@ -87,7 +87,7 @@ const TrendingTwitterHandles = [
 		handle: '@RabindraMishra',
 		searchTerms: ['Rabindra Mishra'],
 		image: 'https://pbs.twimg.com/profile_images/1248923916627636224/YkNkuIPH_200x200.jpg',
-		newsCategories: ['headline', 'politics', 'news']
+		newsCategories: ['headline', 'politics', 'news'],
 	},
 	{
 		name: 'Bhim Rawal',
@@ -96,7 +96,7 @@ const TrendingTwitterHandles = [
 		handle: '@BhimRawal179',
 		searchTerms: ['Bhim Rawal'],
 		image: 'https://pbs.twimg.com/profile_images/863237248593965056/9hJy7pPT_200x200.jpg',
-		newsCategories: ['headline', 'politics', 'news']
+		newsCategories: ['headline', 'politics', 'news'],
 	},
 	{
 		name: 'Narayan Kaji Shrestha',
@@ -105,7 +105,7 @@ const TrendingTwitterHandles = [
 		handle: '@nksthaprakash',
 		searchTerms: ['Narayan Kaji Shrestha'],
 		image: 'https://pbs.twimg.com/profile_images/456438160944136193/ePgSMScw_200x200.jpeg',
-		newsCategories: ['headline', 'politics', 'news']
+		newsCategories: ['headline', 'politics', 'news'],
 	},
 	{
 		name: 'Nilamber Acharya',
@@ -114,7 +114,7 @@ const TrendingTwitterHandles = [
 		handle: '@nilacharya',
 		searchTerms: ['Nilamber Acharya'],
 		image: 'https://pbs.twimg.com/profile_images/1001335641437884417/fYZnA4Nk_200x200.jpg',
-		newsCategories: ['headline', 'politics', 'news']
+		newsCategories: ['headline', 'politics', 'news'],
 	},
 	{
 		name: 'Prakash Man Singh',
@@ -123,7 +123,7 @@ const TrendingTwitterHandles = [
 		handle: '@PMSinghNC',
 		searchTerms: ['Prakash Man Singh'],
 		image: 'https://pbs.twimg.com/profile_images/1262342140807442432/dIqAto9I_200x200.jpg',
-		newsCategories: ['headline', 'politics', 'news']
+		newsCategories: ['headline', 'politics', 'news'],
 	},
 	{
 		name: 'Madhav Kumar Nepal',
@@ -132,7 +132,7 @@ const TrendingTwitterHandles = [
 		handle: '@ncp_madhavnepal',
 		searchTerms: ['Madhav Kumar Nepal'],
 		image: 'https://pbs.twimg.com/profile_images/628469242187223041/1csoeY96_200x200.jpg',
-		newsCategories: ['headline', 'politics', 'news']
+		newsCategories: ['headline', 'politics', 'news'],
 	},
 	{
 		name: 'Comrade Prachanda',
@@ -141,7 +141,7 @@ const TrendingTwitterHandles = [
 		handle: '@cmprachanda',
 		searchTerms: ['Puspa Kamal Dahal', 'Prachanda'],
 		image: 'https://pbs.twimg.com/profile_images/1046428725133414401/cMICPiMS_200x200.jpg',
-		newsCategories: ['headline', 'politics', 'news']
+		newsCategories: ['headline', 'politics', 'news'],
 	},
 	{
 		name: 'Ram Sharan Mahat',
@@ -150,7 +150,7 @@ const TrendingTwitterHandles = [
 		handle: '@ramsmahat',
 		searchTerms: ['Ram Sharan Mahat'],
 		image: 'https://pbs.twimg.com/profile_images/627845038815379457/DnsJZQT9_200x200.jpg',
-		newsCategories: ['headline', 'politics', 'news']
+		newsCategories: ['headline', 'politics', 'news'],
 	},
 	{
 		name: 'Bimalendra Nidhi',
@@ -159,7 +159,7 @@ const TrendingTwitterHandles = [
 		handle: '@BimalendraNidhi',
 		searchTerms: ['Bimalendra Nidhi'],
 		image: 'https://pbs.twimg.com/profile_images/1053672788689596416/nxmj_Fw8_200x200.jpg',
-		newsCategories: ['headline', 'politics', 'news']
+		newsCategories: ['headline', 'politics', 'news'],
 	},
 	{
 		name: 'Ram Chandra Paudel',
@@ -168,7 +168,7 @@ const TrendingTwitterHandles = [
 		handle: '@NcPaudel',
 		searchTerms: ['Ram Chandra Paudel'],
 		image: 'https://pbs.twimg.com/profile_images/1150253522216030208/mXsPNoRz_200x200.jpg',
-		newsCategories: ['headline', 'politics', 'news']
+		newsCategories: ['headline', 'politics', 'news'],
 	},
 	{
 		name: 'Gokul Prasad Baskota',
@@ -177,7 +177,7 @@ const TrendingTwitterHandles = [
 		handle: '@GokulPBaskota',
 		searchTerms: ['Gokul Prasad Baskota'],
 		image: 'https://pbs.twimg.com/profile_images/1046689897376108549/GayzcBjw_200x200.jpg',
-		newsCategories: ['headline', 'politics', 'news']
+		newsCategories: ['headline', 'politics', 'news'],
 	},
 	{
 		name: 'Bhanu Bhakta Dhakal',
@@ -186,7 +186,7 @@ const TrendingTwitterHandles = [
 		handle: '@dhbhanu',
 		searchTerms: ['Bhanu Bhakta Dhakal'],
 		image: 'https://pbs.twimg.com/profile_images/1036251513843318784/2nI3h4vm_200x200.jpg',
-		newsCategories: ['headline', 'politics', 'news']
+		newsCategories: ['headline', 'politics', 'news'],
 	},
 	{
 		name: 'Renu Dahal',
@@ -195,7 +195,7 @@ const TrendingTwitterHandles = [
 		handle: '@RenuDahal1',
 		searchTerms: ['Renu Dahal'],
 		image: 'https://pbs.twimg.com/profile_images/1254573473000636417/09ZQQiQB_x96.jpg',
-		newsCategories: ['headline', 'politics', 'news']
+		newsCategories: ['headline', 'politics', 'news'],
 	},
 	{
 		name: 'Minendra Rijal',
@@ -204,7 +204,7 @@ const TrendingTwitterHandles = [
 		handle: '@MinendraRijal',
 		searchTerms: ['Minendra Rijal'],
 		image: 'https://pbs.twimg.com/profile_images/1277094572103921664/V7t4ezgg_x96.jpg',
-		newsCategories: ['headline', 'politics', 'news']
+		newsCategories: ['headline', 'politics', 'news'],
 	},
 	{
 		name: 'Binod Chaudhary',
@@ -213,16 +213,7 @@ const TrendingTwitterHandles = [
 		handle: '@BinodKChaudhary',
 		searchTerms: ['Binod Chaudhary'],
 		image: 'https://pbs.twimg.com/profile_images/927590536168407040/OqxqSYWf_x96.jpg',
-		newsCategories: ['headline', 'politics', 'news']
-	},
-	{
-		name: 'Sashank Koirala',
-		nepaliName: 'सशांक कोइराला',
-		category: 'Politics',
-		handle: '@sashank_koirala',
-		searchTerms: ['Sashank Koirala'],
-		image: 'https://pbs.twimg.com/profile_images/1293059089971335168/7Qey-wZL_bigger.jpg',
-		newsCategories: ['headline', 'politics', 'news']
+		newsCategories: ['headline', 'politics', 'news'],
 	},
 	{
 		name: 'Bhimarjun Acharya',
@@ -231,7 +222,7 @@ const TrendingTwitterHandles = [
 		handle: '@BhimarjunPhD',
 		searchTerms: ['Bhimarjun Acharya'],
 		image: 'https://pbs.twimg.com/profile_images/3297014097/78caeb4e74942e4b746780b52b49d098_bigger.jpeg',
-		newsCategories: ['headline', 'politics', 'news']
+		newsCategories: ['headline', 'politics', 'news'],
 	},
 	{
 		name: 'Dr. Shekhar Koirala',
@@ -240,7 +231,7 @@ const TrendingTwitterHandles = [
 		handle: '@Shekharnc',
 		searchTerms: ['Dr Shekhar Koirala'],
 		image: 'https://pbs.twimg.com/profile_images/1253916222154031105/bDWqPUN7_bigger.jpg',
-		newsCategories: ['headline', 'politics', 'news']
+		newsCategories: ['headline', 'politics', 'news'],
 	},
 	{
 		name: 'Khagendra Sangroula',
@@ -249,7 +240,7 @@ const TrendingTwitterHandles = [
 		handle: '@belakoboli',
 		searchTerms: ['Khagendra Sangroula'],
 		image: 'https://pbs.twimg.com/profile_images/777430819748974592/RAxgtDyd_200x200.jpg',
-		newsCategories: ['politics', 'news', 'social', 'business']
+		newsCategories: ['politics', 'news', 'social', 'business'],
 	},
 	{
 		name: 'Vijay Kumar Panday',
@@ -258,7 +249,7 @@ const TrendingTwitterHandles = [
 		handle: '@Vijaykumarko',
 		searchTerms: ['Vijay Kumar Panday'],
 		image: 'https://pbs.twimg.com/profile_images/891293756737036288/xR3s_3gO_200x200.jpg',
-		newsCategories: ['social', 'news', 'business']
+		newsCategories: ['social', 'news', 'business'],
 	},
 	{
 		name: 'Bhusan Dahal',
@@ -267,7 +258,7 @@ const TrendingTwitterHandles = [
 		handle: '@DahalTbd',
 		searchTerms: ['Bhusan Dahal'],
 		image: 'https://pbs.twimg.com/profile_images/1280013586824224768/bDX_trnN_200x200.jpg',
-		newsCategories: ['politics', 'news', 'social']
+		newsCategories: ['politics', 'news', 'social'],
 	},
 	{
 		name: 'Dil Bhusan Pathak',
@@ -276,7 +267,7 @@ const TrendingTwitterHandles = [
 		handle: '@DilBhusanPathak',
 		searchTerms: ['Dil Bhusan Pathak'],
 		image: 'https://pbs.twimg.com/profile_images/1182300102280413187/nDlqQ9rD_200x200.jpg',
-		newsCategories: ['politics', 'news', 'social']
+		newsCategories: ['politics', 'news', 'social'],
 	},
 	{
 		name: 'Yubraj Ghimire',
@@ -285,7 +276,7 @@ const TrendingTwitterHandles = [
 		handle: '@YubarajGhimire3',
 		searchTerms: ['Yubaraj Ghimire'],
 		image: 'https://pbs.twimg.com/profile_images/3442008702/66e02b757c23c671223ad7936b5cc085_200x200.jpeg',
-		newsCategories: ['politics', 'news', 'social']
+		newsCategories: ['politics', 'news', 'social'],
 	},
 	{
 		name: 'Kishore Nepal',
@@ -294,7 +285,7 @@ const TrendingTwitterHandles = [
 		handle: '@kishorenepal',
 		searchTerms: ['Kishore Nepal'],
 		image: 'https://pbs.twimg.com/profile_images/1299652841175277568/JYipFj_x_200x200.jpg',
-		newsCategories: ['politics', 'news', 'social']
+		newsCategories: ['politics', 'news', 'social'],
 	},
 	{
 		name: 'Kanak Mani Dixit',
@@ -303,7 +294,7 @@ const TrendingTwitterHandles = [
 		handle: '@KanakManiDixit',
 		searchTerms: ['Kanak Mani Dixit'],
 		image: 'https://pbs.twimg.com/profile_images/1093343506016493568/4OBk94Gk_200x200.jpg',
-		newsCategories: ['politics', 'news', 'social']
+		newsCategories: ['politics', 'news', 'social'],
 	},
 	{
 		name: 'Subhash Ghimire',
@@ -312,7 +303,7 @@ const TrendingTwitterHandles = [
 		handle: '@subhash580',
 		searchTerms: ['Subhash Ghimire'],
 		image: 'https://pbs.twimg.com/profile_images/1293055891877453827/B4c-rO4e_200x200.jpg',
-		newsCategories: ['politics', 'news', 'social']
+		newsCategories: ['politics', 'news', 'social'],
 	},
 	{
 		name: 'Suman Kharel',
@@ -321,7 +312,7 @@ const TrendingTwitterHandles = [
 		handle: '@kharel8',
 		searchTerms: ['Suman Kharel'],
 		image: 'https://pbs.twimg.com/profile_images/2730470518/711a10d884e75e76edb822cbffc63456_bigger.jpeg',
-		newsCategories: ['politics', 'news', 'social', 'entertainment']
+		newsCategories: ['politics', 'news', 'social', 'entertainment'],
 	},
 	{
 		name: 'Buddhisagar',
@@ -330,7 +321,7 @@ const TrendingTwitterHandles = [
 		handle: '@buddhisagar',
 		searchTerms: ['Buddhisagar'],
 		image: 'https://pbs.twimg.com/profile_images/1192153740142399488/ILnu-4hF_bigger.jpg',
-		newsCategories: ['entertainment']
+		newsCategories: ['entertainment'],
 	},
 	{
 		name: 'Govinda Adhikari',
@@ -339,7 +330,7 @@ const TrendingTwitterHandles = [
 		handle: '@agovinda',
 		searchTerms: ['Govinda Adhikari'],
 		image: 'https://pbs.twimg.com/profile_images/378800000443225033/776805b83902603dcf5bfe04e04111d6_bigger.jpeg',
-		newsCategories: ['entertainment']
+		newsCategories: ['entertainment'],
 	},
 	{
 		name: 'Bidhya Chapagain',
@@ -348,7 +339,7 @@ const TrendingTwitterHandles = [
 		handle: '@cbidhya',
 		searchTerms: ['Bidhya Chapagain'],
 		image: 'https://pbs.twimg.com/profile_images/1237621856305172480/Uy4txODI_bigger.jpg',
-		newsCategories: ['entertainment', 'social']
+		newsCategories: ['entertainment', 'social'],
 	},
 	{
 		name: 'Suraj Singh Thakuri',
@@ -357,7 +348,7 @@ const TrendingTwitterHandles = [
 		handle: '@Tsuraj111',
 		searchTerms: ['Suraj Singh Thakuri'],
 		image: 'https://pbs.twimg.com/profile_images/946067092536569856/69tCcN6y_bigger.jpg',
-		newsCategories: ['entertainment']
+		newsCategories: ['entertainment'],
 	},
 	{
 		name: 'Shivani Singh Tharu',
@@ -366,7 +357,7 @@ const TrendingTwitterHandles = [
 		handle: '@shivanitharu',
 		searchTerms: ['Shivani Singh Tharu'],
 		image: 'https://pbs.twimg.com/profile_images/1001365129391304704/59h9ZoBA_bigger.jpg',
-		newsCategories: ['entertainment']
+		newsCategories: ['entertainment'],
 	},
 	{
 		name: 'Narayan Wagle',
@@ -375,7 +366,7 @@ const TrendingTwitterHandles = [
 		handle: '@narayanwagle',
 		searchTerms: ['Narayan Wagle'],
 		image: 'https://pbs.twimg.com/profile_images/783526626659295233/sQghQzY0_bigger.jpg',
-		newsCategories: ['entertainment', 'social']
+		newsCategories: ['entertainment', 'social'],
 	},
 	{
 		name: 'Jagdish Ghimire',
@@ -384,7 +375,7 @@ const TrendingTwitterHandles = [
 		handle: '@JagdishGhimire',
 		searchTerms: ['Jagdish Ghimire'],
 		image: 'https://pbs.twimg.com/profile_images/3191072615/5b445bdb8bc65e8a0332cbc1cca4a9b9_bigger.jpeg',
-		newsCategories: ['entertainment', 'social']
+		newsCategories: ['entertainment', 'social'],
 	},
 	{
 		name: 'Jhamak Ghimire',
@@ -393,7 +384,7 @@ const TrendingTwitterHandles = [
 		handle: '@jhamakghimire',
 		searchTerms: ['Jhamak Ghimire'],
 		image: 'https://pbs.twimg.com/profile_images/956842437703446528/EFnPhNhu_bigger.jpg',
-		newsCategories: ['entertainment', 'social']
+		newsCategories: ['entertainment', 'social'],
 	},
 	{
 		name: 'Krishna Dharabasi',
@@ -402,7 +393,7 @@ const TrendingTwitterHandles = [
 		handle: '@KrishnaDharaba2',
 		searchTerms: ['Krishna Dharabasi'],
 		image: 'https://pbs.twimg.com/profile_images/1258945302968406016/y7-egjp4_bigger.jpg',
-		newsCategories: ['entertainment', 'social']
+		newsCategories: ['entertainment', 'social'],
 	},
 	{
 		name: 'Narayan Shrestha',
@@ -411,7 +402,7 @@ const TrendingTwitterHandles = [
 		handle: '@NrnShrestha',
 		searchTerms: ['Narayan Shrestha'],
 		image: 'https://pbs.twimg.com/profile_images/1058764536356859906/ZV0NBje0_bigger.jpg',
-		newsCategories: ['entertainment', 'social', 'business']
+		newsCategories: ['entertainment', 'social', 'business'],
 	},
 	{
 		name: 'Kailash Sirohiya',
@@ -420,7 +411,7 @@ const TrendingTwitterHandles = [
 		handle: '@KailashSirohiya',
 		searchTerms: ['Kailash Sirohiya'],
 		image: 'https://pbs.twimg.com/profile_images/1034844194660147206/6LONSlFP_bigger.jpg',
-		newsCategories: ['entertainment', 'business']
+		newsCategories: ['entertainment', 'business'],
 	},
 	{
 		name: 'Surya Raj Acharya',
@@ -429,7 +420,7 @@ const TrendingTwitterHandles = [
 		handle: '@SuryaRAcharya',
 		searchTerms: ['Surya Raj Acharya'],
 		image: 'https://pbs.twimg.com/profile_images/964724758767067136/pynIRX0O_bigger.jpg',
-		newsCategories: ['entertainment', 'news', 'politics', 'social', 'technology']
+		newsCategories: ['entertainment', 'news', 'politics', 'social', 'technology'],
 	},
 	{
 		name: 'Subin Bhattarai',
@@ -438,7 +429,7 @@ const TrendingTwitterHandles = [
 		handle: '@subinbhattarai1',
 		searchTerms: ['Subin Bhattarai'],
 		image: 'https://pbs.twimg.com/profile_images/1184444078500352001/E_ccouCZ_bigger.jpg',
-		newsCategories: ['entertainment']
+		newsCategories: ['entertainment'],
 	},
 	{
 		name: 'Achyut Ghimire',
@@ -447,7 +438,7 @@ const TrendingTwitterHandles = [
 		handle: '@achyutbulbul',
 		searchTerms: ['Achyut Ghimire'],
 		image: 'https://pbs.twimg.com/profile_images/946045207367135232/2o4gMHQc_bigger.jpg',
-		newsCategories: ['entertainment']
+		newsCategories: ['entertainment'],
 	},
 	{
 		name: 'Rishi Dhamala',
@@ -456,7 +447,7 @@ const TrendingTwitterHandles = [
 		handle: '@RishiDhamala',
 		searchTerms: ['Rishi Dhamala'],
 		image: 'https://pbs.twimg.com/profile_images/2863667700/4b97a6ae8586135bb66c2915d2d45151_bigger.jpeg',
-		newsCategories: ['politics', 'news', 'entertainment']
+		newsCategories: ['politics', 'news', 'entertainment'],
 	},
 	{
 		name: 'Kala Subba',
@@ -465,7 +456,7 @@ const TrendingTwitterHandles = [
 		handle: '@kalasubba1',
 		searchTerms: ['Kala Subba'],
 		image: 'https://pbs.twimg.com/profile_images/1297785886638084096/do3B63as_bigger.jpg',
-		newsCategories: ['entertainment']
+		newsCategories: ['entertainment'],
 	},
 	{
 		name: 'Sameer M Dixit',
@@ -474,7 +465,7 @@ const TrendingTwitterHandles = [
 		handle: '@smadixit',
 		searchTerms: ['Sameer M Dixit, PhD'],
 		image: 'https://pbs.twimg.com/profile_images/1292814402865922048/44BtABOY_bigger.jpg',
-		newsCategories: ['entertainment']
+		newsCategories: ['entertainment'],
 	},
 	{
 		name: 'Pramod Kharel',
@@ -483,7 +474,7 @@ const TrendingTwitterHandles = [
 		handle: '@kharel777',
 		searchTerms: ['Pramod Kharel'],
 		image: 'https://pbs.twimg.com/profile_images/1041923276585357312/LNomwS-O_200x200.jpg',
-		newsCategories: ['entertainment']
+		newsCategories: ['entertainment'],
 	},
 	{
 		name: 'Deepak Bajracharya',
@@ -492,7 +483,7 @@ const TrendingTwitterHandles = [
 		handle: '@dpkbajra',
 		searchTerms: ['Deepak Bajracharya'],
 		image: 'https://pbs.twimg.com/profile_images/867739088329289729/SWx6ngN8_200x200.jpg',
-		newsCategories: ['entertainment']
+		newsCategories: ['entertainment'],
 	},
 	{
 		name: 'Amrit Gurung',
@@ -501,7 +492,7 @@ const TrendingTwitterHandles = [
 		handle: '@amritnepathya',
 		searchTerms: ['Amrit Gurung'],
 		image: 'https://pbs.twimg.com/profile_images/2662938816/59e44bb1f8ca647004c4bff01218c44b_bigger.jpeg',
-		newsCategories: ['entertainment']
+		newsCategories: ['entertainment'],
 	},
 	{
 		name: 'Astha Tamang-Maskey',
@@ -510,7 +501,7 @@ const TrendingTwitterHandles = [
 		handle: '@asthamusic',
 		searchTerms: ['Astha Tamang-Maskey'],
 		image: 'https://pbs.twimg.com/profile_images/1248314195705135104/02lx9Ol4_bigger.jpg',
-		newsCategories: ['entertainment']
+		newsCategories: ['entertainment'],
 	},
 	{
 		name: 'Manoj Kumar KC',
@@ -519,7 +510,7 @@ const TrendingTwitterHandles = [
 		handle: '@manoj1974',
 		searchTerms: ['Manoj Kumar KC'],
 		image: 'https://pbs.twimg.com/profile_images/979715460211015680/i4CgJ1U7_bigger.jpg',
-		newsCategories: ['entertainment']
+		newsCategories: ['entertainment'],
 	},
 	{
 		name: 'Raju Lama',
@@ -528,7 +519,7 @@ const TrendingTwitterHandles = [
 		handle: '@RajuLama',
 		searchTerms: ['Raju Lama'],
 		image: 'https://pbs.twimg.com/profile_images/445498168/DSC_0959_bigger.JPG',
-		newsCategories: ['entertainment']
+		newsCategories: ['entertainment'],
 	},
 	{
 		name: 'Astha Raut',
@@ -537,7 +528,7 @@ const TrendingTwitterHandles = [
 		handle: '@astharaut',
 		searchTerms: ['Astha Raut'],
 		image: 'https://pbs.twimg.com/profile_images/813965343001456640/IStKorpj_bigger.jpg',
-		newsCategories: ['entertainment']
+		newsCategories: ['entertainment'],
 	},
 	{
 		name: 'Ram Krishna Dhakal',
@@ -546,7 +537,7 @@ const TrendingTwitterHandles = [
 		handle: '@ramkdhakal',
 		searchTerms: ['Ram Krishna Dhakal'],
 		image: 'https://pbs.twimg.com/profile_images/1130468156684742656/f9Bf6IUn_bigger.jpg',
-		newsCategories: ['entertainment']
+		newsCategories: ['entertainment'],
 	},
 	{
 		name: 'Nima Rumba',
@@ -555,7 +546,7 @@ const TrendingTwitterHandles = [
 		handle: '@nimarumba',
 		searchTerms: ['Nima Rumba'],
 		image: 'https://pbs.twimg.com/profile_images/708656879262629888/PgZ64hwl_bigger.jpg',
-		newsCategories: ['entertainment']
+		newsCategories: ['entertainment'],
 	},
 	{
 		name: 'Nabin K Bhattarai',
@@ -564,7 +555,7 @@ const TrendingTwitterHandles = [
 		handle: '@nabinkbhattarai',
 		searchTerms: ['Nabin K Bhattarai'],
 		image: 'https://pbs.twimg.com/profile_images/1295000946498363392/vCHvDoRz_bigger.jpg',
-		newsCategories: ['entertainment']
+		newsCategories: ['entertainment'],
 	},
 	{
 		name: 'Abhaya Subba',
@@ -573,7 +564,7 @@ const TrendingTwitterHandles = [
 		handle: '@AbhayaSubba',
 		searchTerms: ['Abhaya Subba'],
 		image: 'https://pbs.twimg.com/profile_images/1278699629412941824/MeFz1RAl_bigger.jpg',
-		newsCategories: ['entertainment']
+		newsCategories: ['entertainment'],
 	},
 	{
 		name: 'Samriddhi Rai',
@@ -582,7 +573,7 @@ const TrendingTwitterHandles = [
 		handle: '@samriddhirai13',
 		searchTerms: ['Samriddhi Rai'],
 		image: 'https://pbs.twimg.com/profile_images/1218485932241801216/OtB95SXU_bigger.jpg',
-		newsCategories: ['entertainment']
+		newsCategories: ['entertainment'],
 	},
 	{
 		name: 'Manisha Koirala',
@@ -591,7 +582,7 @@ const TrendingTwitterHandles = [
 		handle: '@mkoirala',
 		searchTerms: ['Manisha Koirala'],
 		image: 'https://pbs.twimg.com/profile_images/1061546130247430144/duf25B-a_200x200.jpg',
-		newsCategories: ['entertainment', 'politics', 'news', 'headline', 'social']
+		newsCategories: ['entertainment', 'politics', 'news', 'headline', 'social'],
 	},
 	{
 		name: 'Keki Adhikari',
@@ -600,7 +591,7 @@ const TrendingTwitterHandles = [
 		handle: '@KekiAdhikari',
 		searchTerms: ['Keki Adhikari'],
 		image: 'https://pbs.twimg.com/profile_images/1297515211293745153/KX3QXGvs_200x200.jpg',
-		newsCategories: ['entertainment']
+		newsCategories: ['entertainment'],
 	},
 	{
 		name: 'Rajesh Hamal',
@@ -609,7 +600,7 @@ const TrendingTwitterHandles = [
 		handle: '@RajeshHamal64',
 		searchTerms: ['Rajesh Hamal'],
 		image: 'https://pbs.twimg.com/profile_images/1223595122945753093/ZubYq5hK_200x200.jpg',
-		newsCategories: ['entertainment']
+		newsCategories: ['entertainment'],
 	},
 	{
 		name: 'Manoj Gajurel',
@@ -618,7 +609,7 @@ const TrendingTwitterHandles = [
 		handle: '@gajureal',
 		searchTerms: ['Manoj Gajurel'],
 		image: 'https://pbs.twimg.com/profile_images/1275063373994930178/ZJSUWlDc_200x200.jpg',
-		newsCategories: ['entertainment']
+		newsCategories: ['entertainment'],
 	},
 	{
 		name: 'Priyanka Karki',
@@ -627,7 +618,7 @@ const TrendingTwitterHandles = [
 		handle: '@PriyankaKarky',
 		searchTerms: ['Priyanka Karki'],
 		image: 'https://pbs.twimg.com/profile_images/944935879562457089/uBkmC0U2_200x200.jpg',
-		newsCategories: ['entertainment']
+		newsCategories: ['entertainment'],
 	},
 	{
 		name: 'Rekha Thapa',
@@ -636,7 +627,7 @@ const TrendingTwitterHandles = [
 		handle: '@rekhafilms',
 		searchTerms: ['Rekha Thapa'],
 		image: 'https://pbs.twimg.com/profile_images/1159465637330087937/24KOLdDG_200x200.jpg',
-		newsCategories: ['entertainment']
+		newsCategories: ['entertainment'],
 	},
 	{
 		name: 'Dayahang Rai',
@@ -645,7 +636,7 @@ const TrendingTwitterHandles = [
 		handle: '@dayahangrai',
 		searchTerms: ['Dayahang Rai'],
 		image: 'https://pbs.twimg.com/profile_images/739446581724729345/GnwJmfhN_200x200.jpg',
-		newsCategories: ['entertainment']
+		newsCategories: ['entertainment'],
 	},
 	{
 		name: 'Namrataa Shrestha',
@@ -654,7 +645,7 @@ const TrendingTwitterHandles = [
 		handle: '@NamrataaS',
 		searchTerms: ['Namrataa Shrestha'],
 		image: 'https://pbs.twimg.com/profile_images/1136678908105961473/6chqSPWA_200x200.png',
-		newsCategories: ['entertainment']
+		newsCategories: ['entertainment'],
 	},
 	{
 		name: 'Reeccha Sharma',
@@ -663,7 +654,7 @@ const TrendingTwitterHandles = [
 		handle: '@reecchasharrma',
 		searchTerms: ['Reeccha Sharma'],
 		image: 'https://pbs.twimg.com/profile_images/1233090377684381696/KMah4dNV_200x200.jpg',
-		newsCategories: ['entertainment']
+		newsCategories: ['entertainment'],
 	},
 	{
 		name: 'Raj Ballav Koirala',
@@ -672,7 +663,7 @@ const TrendingTwitterHandles = [
 		handle: '@RajBallav',
 		searchTerms: ['Raj Ballav Koirala'],
 		image: 'https://pbs.twimg.com/profile_images/1295182129337425925/jWkU-B3c_200x200.jpg',
-		newsCategories: ['entertainment']
+		newsCategories: ['entertainment'],
 	},
 	{
 		name: 'Shweta Khadka',
@@ -681,7 +672,7 @@ const TrendingTwitterHandles = [
 		handle: '@Shweta_khadka',
 		searchTerms: ['Shweta Khadka'],
 		image: 'https://pbs.twimg.com/profile_images/1005867068170752000/6VbCESKj_200x200.jpg',
-		newsCategories: ['entertainment']
+		newsCategories: ['entertainment'],
 	},
 	{
 		name: 'Neeta Dhungana',
@@ -690,7 +681,7 @@ const TrendingTwitterHandles = [
 		handle: '@neeta_dhungana_',
 		searchTerms: ['Neeta Dhungana'],
 		image: 'https://pbs.twimg.com/profile_images/1262401622140952585/ihgg8K2-_200x200.jpg',
-		newsCategories: ['entertainment']
+		newsCategories: ['entertainment'],
 	},
 	{
 		name: 'Jharana Thapa',
@@ -699,7 +690,7 @@ const TrendingTwitterHandles = [
 		handle: '@jharana_thapa',
 		searchTerms: ['Jharana Thapa'],
 		image: 'https://pbs.twimg.com/profile_images/993441947443519489/jJEfHCaL_200x200.jpg',
-		newsCategories: ['entertainment']
+		newsCategories: ['entertainment'],
 	},
 	{
 		name: 'Nisha Adhikari',
@@ -708,7 +699,7 @@ const TrendingTwitterHandles = [
 		handle: '@nishaadhikari4u',
 		searchTerms: ['Nisha Adhikari'],
 		image: 'https://pbs.twimg.com/profile_images/419462881621458945/myk5mCAq_200x200.jpeg',
-		newsCategories: ['entertainment']
+		newsCategories: ['entertainment'],
 	},
 	{
 		name: 'Deepak Raj Giri',
@@ -717,7 +708,7 @@ const TrendingTwitterHandles = [
 		handle: '@deepakraj2016',
 		searchTerms: ['Deepak Raj Giri'],
 		image: 'https://pbs.twimg.com/profile_images/686208528088875008/7dN-KKz2_200x200.jpg',
-		newsCategories: ['entertainment']
+		newsCategories: ['entertainment'],
 	},
 	{
 		name: 'Namrata Sapkota',
@@ -726,7 +717,7 @@ const TrendingTwitterHandles = [
 		handle: '@inamratasapkota',
 		searchTerms: ['Namrata Sapkota'],
 		image: 'https://pbs.twimg.com/profile_images/807072671615721472/ULCYnA_5_bigger.jpg',
-		newsCategories: ['entertainment']
+		newsCategories: ['entertainment'],
 	},
 	{
 		name: 'Sandeep Lamichhane',
@@ -735,7 +726,7 @@ const TrendingTwitterHandles = [
 		handle: '@Sandeep25',
 		searchTerms: ['Sandeep Lamicchane'],
 		image: 'https://pbs.twimg.com/profile_images/1291014777955921921/5-KR7GNa_200x200.jpg',
-		newsCategories: ['entertainment', 'sports', 'headline']
+		newsCategories: ['entertainment', 'sports', 'headline'],
 	},
 	{
 		name: 'Paras Khadka',
@@ -744,7 +735,7 @@ const TrendingTwitterHandles = [
 		handle: '@paras77',
 		searchTerms: ['Paras Khadka'],
 		image: 'https://pbs.twimg.com/profile_images/1264936585008517122/QG3YAxGA_200x200.jpg',
-		newsCategories: ['entertainment', 'sports', 'headline']
+		newsCategories: ['entertainment', 'sports', 'headline'],
 	},
 	{
 		name: 'Gaurika Singh',
@@ -753,7 +744,7 @@ const TrendingTwitterHandles = [
 		handle: '@gaurika_singh',
 		searchTerms: ['Gaurika Singh'],
 		image: 'https://pbs.twimg.com/profile_images/1282074805026594819/stoZRfKq_200x200.jpg',
-		newsCategories: ['entertainment', 'sports', 'headline']
+		newsCategories: ['entertainment', 'sports', 'headline'],
 	},
 	{
 		name: 'Sipora Gurung',
@@ -762,7 +753,7 @@ const TrendingTwitterHandles = [
 		handle: '@GurungSipora',
 		searchTerms: ['Sipora Gurung'],
 		image: 'https://pbs.twimg.com/profile_images/996204655460978688/5WNzHlUg_200x200.jpg',
-		newsCategories: ['entertainment', 'sports', 'headline']
+		newsCategories: ['entertainment', 'sports', 'headline'],
 	},
 	{
 		name: 'Gyanendra Malla',
@@ -771,7 +762,7 @@ const TrendingTwitterHandles = [
 		handle: '@gyanu_gm11',
 		searchTerms: ['Gyanendra Malla'],
 		image: 'https://pbs.twimg.com/profile_images/1024227850189254656/kzLSPbl8_200x200.jpg',
-		newsCategories: ['entertainment', 'sports', 'headline']
+		newsCategories: ['entertainment', 'sports', 'headline'],
 	},
 	{
 		name: 'Karan KC',
@@ -780,7 +771,7 @@ const TrendingTwitterHandles = [
 		handle: '@karankc33',
 		searchTerms: ['Karan KC'],
 		image: 'https://pbs.twimg.com/profile_images/1114023812813791233/XuL_fow6_bigger.jpg',
-		newsCategories: ['entertainment', 'sports', 'headline']
+		newsCategories: ['entertainment', 'sports', 'headline'],
 	},
 	{
 		name: 'Binod Das',
@@ -789,7 +780,7 @@ const TrendingTwitterHandles = [
 		handle: '@binodsum',
 		searchTerms: ['Binod Das'],
 		image: 'https://pbs.twimg.com/profile_images/1270050160131751936/JTrB03OY_bigger.jpg',
-		newsCategories: ['entertainment', 'sports', 'headline']
+		newsCategories: ['entertainment', 'sports', 'headline'],
 	},
 	{
 		name: 'Nirmal Purja',
@@ -798,7 +789,7 @@ const TrendingTwitterHandles = [
 		handle: '@nimsdai',
 		searchTerms: ['Nirmal Purja'],
 		image: 'https://pbs.twimg.com/profile_images/1155908331170619393/GUiExdN3_200x200.jpg',
-		newsCategories: ['entertainment', 'sports', 'headline']
+		newsCategories: ['entertainment', 'sports', 'headline'],
 	},
 	{
 		name: 'Gyanendra Shah',
@@ -807,7 +798,7 @@ const TrendingTwitterHandles = [
 		handle: '@GBBShah',
 		searchTerms: ['Gyanendra Shah'],
 		image: 'https://pbs.twimg.com/profile_images/1249686060088451073/SmdhKkDN_200x200.jpg',
-		newsCategories: ['entertainment', 'politics', 'news', 'headline', 'social']
+		newsCategories: ['entertainment', 'politics', 'news', 'headline', 'social'],
 	},
 	{
 		name: 'Shrinkhala Khatiwada',
@@ -816,7 +807,7 @@ const TrendingTwitterHandles = [
 		handle: '@shrinkhalak_',
 		searchTerms: ['Shrinkhala Khatiwada'],
 		image: 'https://pbs.twimg.com/profile_images/1236735749967372288/h2_MoJNK_bigger.jpg',
-		newsCategories: ['entertainment', 'politics', 'news', 'headline', 'social']
+		newsCategories: ['entertainment', 'politics', 'news', 'headline', 'social'],
 	},
 	{
 		name: 'Malvika Subba',
@@ -825,16 +816,7 @@ const TrendingTwitterHandles = [
 		handle: '@malvikasubba',
 		searchTerms: ['Malvika Subba'],
 		image: 'https://pbs.twimg.com/profile_images/3340344956/236b48c27cde0dff139ae54f26085ce3_bigger.jpeg',
-		newsCategories: ['entertainment']
-	},
-	{
-		name: 'Himani Shah',
-		nepaliName: 'हिमानी शाह',
-		category: 'Others',
-		handle: '@Himanishah123',
-		searchTerms: ['Himani Shah'],
-		image: 'https://pbs.twimg.com/profile_images/1332859151731494912/O8kL_Ubi_bigger.jpg',
-		newsCategories: ['entertainment', 'social']
+		newsCategories: ['entertainment'],
 	},
 	{
 		name: 'Nikita Acharya',
@@ -843,7 +825,7 @@ const TrendingTwitterHandles = [
 		handle: '@nikitacharyaa',
 		searchTerms: ['Nikita Acharya'],
 		image: 'https://pbs.twimg.com/profile_images/1113307549816774656/uMUgNSk6_bigger.png',
-		newsCategories: ['entertainment', 'social']
+		newsCategories: ['entertainment', 'social'],
 	},
 	{
 		name: 'Anil Shah',
@@ -852,7 +834,7 @@ const TrendingTwitterHandles = [
 		handle: '@AnilKesharyShah',
 		searchTerms: ['Anil Shah', 'Anil Keshary Shah'],
 		image: 'https://pbs.twimg.com/profile_images/1242755605455966208/sGvZ_jyY_bigger.jpg',
-		newsCategories: ['entertainment', 'business', 'share']
+		newsCategories: ['entertainment', 'business', 'share'],
 	},
 	{
 		name: 'Dr Govinda KC',
@@ -861,7 +843,7 @@ const TrendingTwitterHandles = [
 		handle: '@DrGovindaKC',
 		searchTerms: ['Govinda KC'],
 		image: 'https://pbs.twimg.com/profile_images/581000405246558208/qRhMZ9lM_bigger.jpg',
-		newsCategories: ['social', 'health']
+		newsCategories: ['social', 'health'],
 	},
 	{
 		name: 'Mahabir Pun',
@@ -870,7 +852,7 @@ const TrendingTwitterHandles = [
 		handle: '@MahabirPun',
 		searchTerms: ['Mahabir Pun'],
 		image: 'https://pbs.twimg.com/profile_images/3256983670/0d96411852fb0aea173f5607b5af9c9d_bigger.jpeg',
-		newsCategories: ['social', 'technology', 'headline']
+		newsCategories: ['social', 'technology', 'headline'],
 	},
 	{
 		name: 'Sugat Kansakar',
@@ -879,8 +861,8 @@ const TrendingTwitterHandles = [
 		handle: '@SugatKansakar',
 		searchTerms: ['Sugat Kansakar'],
 		image: 'https://pbs.twimg.com/profile_images/1895806178/sugat_pp_bigger.jpg',
-		newsCategories: ['news', 'headline', 'technology']
-	}
+		newsCategories: ['news', 'headline', 'technology'],
+	},
 ]
 
 module.exports = {
