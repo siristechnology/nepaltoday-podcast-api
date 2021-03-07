@@ -1,4 +1,4 @@
-[	
+[
 	{
 		"name": "ekantipur",
 		"sourceName": "ekantipur",
@@ -41,7 +41,10 @@
 			"title": "main > article > header > h1",
 			"excerpt": "main > article .description> p:nth-child(1)",
 			"lead-image": "#wrapper main article header figure img",
-			"content": ["main article div.text-wrap p.description", "main article div.text-wrap div.description"],
+			"content": [
+				"main article div.text-wrap p.description",
+				"main article div.text-wrap div.description"
+			],
 			"tags": "",
 			"likes-count": "main > article > header div.total.shareTotal"
 		}
@@ -93,7 +96,9 @@
 			"title": "section.news-detail-section div.title-names span.news-big-title",
 			"excerpt": "#content > div.container > div > aside.left-side > div.row > div > div.editor-box > p:nth-child(2)",
 			"lead-image": "section.news-detail-section div.featured-images figure img",
-			"content": ["aside.left-side div.detail-box div.editor-box"],
+			"content": [
+				"aside.left-side div.detail-box div.editor-box"
+			],
 			"tags": "#header > div.container.main-menu > div > div > div > ul > li > a.selected"
 		}
 	},
@@ -149,7 +154,9 @@
 			"title": ".article-head > h1",
 			"excerpt": ".ratopati-table-border-layout p:first-child",
 			"lead-image": "div .ot-material-card-content > div .img-with-no-margin > img",
-			"content": [".ratopati-table-border-layout"],
+			"content": [
+				".ratopati-table-border-layout"
+			],
 			"tags": "#content > div > div.ot-content-with-sidebar-right > div.col-md-9 > nav > ol > li.breadcrumb-item.active > a"
 		}
 	},
@@ -192,7 +199,9 @@
 			"title": "h2.mb-0",
 			"excerpt": "div.main__read--content p:first-child",
 			"lead-image": "div.col.colspan3.dtl-img img",
-			"content": ["div.main__read--content"],
+			"content": [
+				"div.main__read--content"
+			],
 			"tags": "#main > section > div > div.nws__title--card > div.custom_breadcrumb > a:nth-child(2)"
 		}
 	},
@@ -213,7 +222,9 @@
 			"title": "#content",
 			"excerpt": "main > div > p",
 			"lead-image": "main > div > figure div > img",
-			"content": ["main > div"]
+			"content": [
+				"main > div"
+			]
 		}
 	},
 	{
@@ -233,7 +244,9 @@
 			"title": "aside > div > section > div > span.news-big-title",
 			"excerpt": "aside > div > div.row.news-detail > div > div.editor-box > p:nth-child(3)",
 			"lead-image": "aside > div > div.row.news-detail > div > div.editor-box > div.featured-images > figure > img",
-			"content": ["aside > div > div.row.news-detail > div > div.editor-box"]
+			"content": [
+				"aside > div > div.row.news-detail > div > div.editor-box"
+			]
 		}
 	},
 	{
@@ -253,7 +266,9 @@
 			"title": "article > header > h2",
 			"excerpt": ".detail-wrap > p:nth-of-type(2)",
 			"lead-image": "section > div.detail-imgwrap > div.column.img-wrap > figure > img",
-			"content": ["section.detail-wrap"]
+			"content": [
+				"section.detail-wrap"
+			]
 		}
 	},
 	{
@@ -273,7 +288,9 @@
 			"title": "div.post-header > h1",
 			"excerpt": "div.section > div.post-content > p:nth-child(2)",
 			"lead-image": "div.section > div.post-content > img",
-			"content": ["div.section > div.post-content"]
+			"content": [
+				"div.section > div.post-content"
+			]
 		}
 	},
 	{
@@ -293,7 +310,9 @@
 			"title": "article > header > h1",
 			"excerpt": "article > p:nth-of-type(1)",
 			"lead-image": "article > div.mb-3 > img",
-			"content": ["article"]
+			"content": [
+				"article"
+			]
 		}
 	},
 	{
@@ -333,7 +352,9 @@
 			"title": "article > header > h2",
 			"excerpt": "section > p:nth-child(2)",
 			"lead-image": "section > div.img-wrap > figure > fig > img",
-			"content": ["article > div > div > section"]
+			"content": [
+				"article > div > div > section"
+			]
 		}
 	},
 	{
@@ -373,7 +394,9 @@
 			"title": "h1",
 			"excerpt": "article > div.pahilo-news-content.pahilo-styled-news > div > div > p:nth-child(2)",
 			"lead-image": "article > figure > img",
-			"content": ["article > div.pahilo-news-content.pahilo-styled-news > div > div"]
+			"content": [
+				"article > div.pahilo-news-content.pahilo-styled-news > div > div"
+			]
 		}
 	},
 	{
@@ -393,7 +416,9 @@
 			"title": "#divNewsDetail > h1",
 			"excerpt": "#divNewsDetail > div.newsDesc > div",
 			"lead-image": "#image_share > div > ul > li > img",
-			"content": ["#divNewsDetail > div.newsDesc > div"]
+			"content": [
+				"#divNewsDetail > div.newsDesc > div"
+			]
 		}
 	},
 	{
@@ -413,7 +438,10 @@
 			"title": ".media-body .media-title.newsTitle",
 			"excerpt": "#ctl00_ContentPlaceHolder1_newsOverview > p > span",
 			"lead-image": ".media-body .media-content span img:nth-of-type(1)",
-			"content": ["#ctl00_ContentPlaceHolder1_newsOverview > p > span", "#ctl00_ContentPlaceHolder1_newsDetail"]
+			"content": [
+				"#ctl00_ContentPlaceHolder1_newsOverview > p > span",
+				"#ctl00_ContentPlaceHolder1_newsDetail"
+			]
 		}
 	},
 	{
@@ -424,16 +452,18 @@
 		"weight": 8,
 		"pages": [
 			{
-				"url": "https://baahrakhari.com/news-article/65/Cartoon",
+				"url": "https://baahrakhari.com/Cartoon",
 				"category": "cartoon",
-				"link-selector": "article > section > div.row.page-news-list > div > div > h3 > a"
+				"link-selector": "#content .left-side.baahrakhari-left.left-detail-page > section.section.breaking-news a"
 			}
 		],
 		"article-detail-selectors": {
-			"title": "article > header > h2",
-			"excerpt": "article > header > h2",
-			"lead-image": "article > div > div > section > div.img-wrap > figure > fig > img",
-			"content": ["article > header > h2"],
+			"title": "#content .baahrakhari-left > section > .title-names > .news-big-title",
+			"excerpt": "#content .baahrakhari-left > section > .title-names > .news-big-title",
+			"lead-image": "#content .featured-images > figure > img",
+			"content": [
+				"#content .baahrakhari-left > section > .title-names > .news-big-title"
+			],
 			"date-selector": "article > div > div:nth-child(2) > ul > li:nth-child(2)"
 		}
 	},
@@ -468,7 +498,9 @@
 		"article-detail-selectors": {
 			"title": "div > h1",
 			"excerpt": "div.biz-news-content > p:nth-child(3)",
-			"content": ["div.biz-news-content"],
+			"content": [
+				"div.biz-news-content"
+			],
 			"lead-image": "div.biz-news-content > p:nth-child(2) > img"
 		}
 	},
@@ -488,7 +520,9 @@
 		"article-detail-selectors": {
 			"title": "article.module-detail-page.margin-top > header > h1",
 			"excerpt": "article.module-detail-page.margin-top > header > h6",
-			"content": ["article.module-detail-page.margin-top > section"],
+			"content": [
+				"article.module-detail-page.margin-top > section"
+			],
 			"lead-image": "article.module-detail-page.margin-top > section > figure > img"
 		}
 	}
