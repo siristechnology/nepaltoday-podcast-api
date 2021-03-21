@@ -7,9 +7,9 @@ const Podcast = mongoose.model(
 	new Schema({
 		title: { type: String, required: true },
 		description: String,
-		imageURL: String,
-		originalAudioLink: String,
-		audioLink: String,
+		imageUrl: String,
+		originalAudioUrl: String,
+		audioUrl: String,
 		durationInSeconds: Number,
 		category: String,
 		createdDate: { type: Date, default: Date.now },

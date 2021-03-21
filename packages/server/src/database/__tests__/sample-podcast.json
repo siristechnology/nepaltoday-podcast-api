@@ -3,9 +3,9 @@
         "title": "सिक्दै सिकाउँदै",
         "description": "19 SS_Nepali 2021-01-11 (Season 2)",
         "imageURL": "https://unncdn.prixacdn.net/media/Sidai_sikaudai_Nepali.jpg",
-        "originalAudioLink": "https://unncdn.prixacdn.net/media/radio_audio/2021/01/11/19_SS_Nepali_2021-01-11_Season_2.mp3",
+        "originalAudioUrl": "https://unncdn.prixacdn.net/media/radio_audio/2021/01/11/19_SS_Nepali_2021-01-11_Season_2.mp3",
         "link": "https://ujyaaloonline.com/show/9866",
-        "audioLink": "https://podcast-beta-s3.s3.amazonaws.com/10317587-2f50-4d8e-a5c4-f48739121197",
+        "audioUrl": "https://podcast-beta-s3.s3.amazonaws.com/10317587-2f50-4d8e-a5c4-f48739121197",
         "durationInSeconds": 932,
         "category": "education",
         "publisher": {

@@ -31,20 +31,21 @@ module.exports = async function () {
 }
 
 const checkPodcast = async (link) => {
-	const podcastRes = await Podcast.findOne({ originalAudioLink: link }).lean()
+	const podcastRes = await Podcast.findOne({ originalAudioUrl: link }).lean()
 	return podcastRes && podcastRes.link
 }
 
 const savePodcastToDatabase = async (podcast, s3Response, duration) => {
+	console.log('printing podcast', podcast)
+
 	const podcastObj = {
 		author: podcast.sourceName,
 		title: podcast.title,
 		description: podcast.excerpt,
-		imageURL: podcast.imageLink,
-		thumbnailImageURL: podcast.imageLink,
-		originalAudioLink: podcast.audioUrl,
+		imageUrl: podcast.imageLink,
+		audioUrl: s3Response.Location,
+		originalAudioUrl: podcast.audioUrl,
 		link: podcast.link,
-		audioLink: s3Response.Location,
 		duration: duration.duration,
 		durationInSeconds: duration.durationInSeconds,
 		category: podcast.category,

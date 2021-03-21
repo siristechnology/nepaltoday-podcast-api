@@ -5,16 +5,16 @@ type Publiisher {
 type Program {
 	title: String!
 	titleInEnglish: String!
-	imageURL: String!
+	imageUrl: String!
 	category: String!
 }
 
 type Podcast {
 	title: String!
 	description: String!
-	imageURL: String!
-	originalAudioLink: String!
-	audioLink: String!
+	imageUrl: String!
+	originalAudioUrl: String!
+	audioUrl: String!
 	durationInSeconds: Float!
 	category: String!
 	createdDate: String
