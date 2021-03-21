@@ -1,65 +1,55 @@
-const NewsCrawler = require('news-crawler')
-const { saveArticles } = require('../../db-service/newsDbService')
-const SourceConfig = require('../../config/source-config.json')
-const logger = require('../../config/logger')
-const { getTagsFromArticle, assignWeights } = require('./helper')
-const { Article, TrendingTopic } = require('../../db-service/database/mongooseSchema')
-const { convertArticleDateToAD } = require('./dateConverter')
+const SourceConfig = require('./../../config/podcast-source-config.json')
+const PodcastCrawler = require('news-crawler')
+const uploadHelper = require('./uploadHelper')
+const { checkPodcastByOriginalLink, create } = require('../../dao/PodcastDAO')
+const getPodcastDuration = require('./getPodcastDuration')
 
 module.exports = async function () {
-	const ipAddress = require('ip').address()
-
 	try {
-		let articles = await NewsCrawler(SourceConfig, { headless: true })
-		articles = articles.filter((a) => a.imageLink !== null)
-
-		let cartoonArticles = articles.filter((x) => x.category == 'cartoon')
-		cartoonArticles = cartoonArticles.map((article) => {
-			article.title = article.imageLink
-			return article
-		})
-		const exceptCartoonArticles = articles.filter((x) => x.category != 'cartoon')
-
-		let dateConvertedCartoonArticles = []
-		cartoonArticles.map((article) => {
-			dateConvertedCartoonArticles.push(convertArticleDateToAD(article))
-		})
-
-		articles = exceptCartoonArticles.concat(dateConvertedCartoonArticles)
-
-		const trendingTopics = await TrendingTopic.find()
-		const savedArticles = await Article.find({ createdDate: { $gt: new Date(Date.now() - 24 * 60 * 60 * 1000) } })
-		const articleWithTags = []
-
-		const nonHeadlineArticles = articles.filter((x) => x.category !== 'headline')
-		const savedHeadlineArticles = savedArticles.filter((x) => x.category === 'headline')
-		for (const article of nonHeadlineArticles) {
-			const repeated = savedHeadlineArticles.filter((x) => x.link === article.link)
-			if (repeated.length > 0) {
-				await Article.findOneAndUpdate({ link: repeated[0].link }, { category: article.category })
-			}
-		}
-
-		for (const article of articles) {
-			if (savedArticles.filter((x) => x.title === article.title).length === 0) {
-				if (trendingTopics.length > 0) {
-					article.tags = getTagsFromArticle(trendingTopics[0].topics, article.content)
+		let podcasts = await PodcastCrawler(SourceConfig, { headless: true, articleUrlLength: 3 })
+		podcasts = podcasts.filter((x) => x.imageLink.length > 5)
+		podcasts = podcasts.filter((x) => x.audioUrl.length > 5)
+		for (const podcast of podcasts) {
+			const podcastSaved = await checkPodcast(podcast.audioUrl)
+			if (!podcastSaved) {
+				try {
+					const s3Response = await uploadHelper(podcast)
+					if (s3Response.success) {
+						const duration = await getPodcastDuration(podcast.audioUrl)
+						await savePodcasttoDatabase(podcast, s3Response.response, duration)
+						console.log('podcast saved')
+					}
+				} catch (err) {
+					console.log('Error saving', err)
 				}
-				articleWithTags.push(article)
 			}
 		}
-
-		const newArticles = articleWithTags.filter((article) => !savedArticles.some((sa) => sa.link === article.link))
-		const newArticlesWithWeight = assignWeights(newArticles)
-
-		newArticlesWithWeight.forEach((x) => {
-			x.hostIp = ipAddress
-			x.shortDescription = x.shortDescription || '..'
-		})
-		await saveArticles(newArticlesWithWeight)
-
-		logger.info(`News Crawler ran! Articles Saved: ${newArticlesWithWeight.length}`, { date: new Date().toISOString() })
 	} catch (error) {
-		logger.error('Error while crawling:', error)
+		console.log(error)
 	}
+}
+
+const checkPodcast = async (link) => {
+	const podcastRes = await checkPodcastByOriginalLink(link)
+	return podcastRes
+}
+
+const savePodcasttoDatabase = async (podcast, s3Response, duration) => {
+	const podcastObj = {
+		author: podcast.sourceName,
+		title: podcast.title,
+		description: podcast.excerpt,
+		imageURL: podcast.imageLink,
+		thumbnailImageURL: podcast.imageLink,
+		originalAudioLink: podcast.audioUrl,
+		link: podcast.link,
+		audioLink: s3Response.Location,
+		duration: duration.duration,
+		durationInSeconds: duration.durationInSeconds,
+		category: podcast.category,
+		program: podcast.program,
+		programInEnglish: podcast.programInEnglish,
+	}
+
+	await create(podcastObj)
 }

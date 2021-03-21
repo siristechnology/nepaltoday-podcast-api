@@ -1,4 +1,4 @@
-const NewsCrawlerTrigger = require('../index')
+const PodcastCrawler = require('../index')
 const { dbConnection } = require('../../../helper/connectionHelper')
 
 jest.setTimeout(1200000)
@@ -7,8 +7,8 @@ beforeAll(async () => {
 	await dbConnection()
 })
 
-describe('NewsCrawlerTrigger', () => {
+describe('podcastCrawler', () => {
 	it('integration test', async () => {
-		await NewsCrawlerTrigger()
+		await PodcastCrawler()
 	})
 })
