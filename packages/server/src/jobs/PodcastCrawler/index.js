@@ -1,7 +1,8 @@
-const SourceConfig = require('./../../config/podcast-source-config.json')
+const SourceConfig = require('./../../config/source-config.json')
 const PodcastCrawler = require('news-crawler')
 const uploadHelper = require('./uploadHelper')
-const { checkPodcastByOriginalLink, create } = require('../../dao/PodcastDAO')
+const { Podcast } = require('../../db-service/database/mongooseSchema')
+
 const getPodcastDuration = require('./getPodcastDuration')
 
 module.exports = async function () {
@@ -16,7 +17,7 @@ module.exports = async function () {
 					const s3Response = await uploadHelper(podcast)
 					if (s3Response.success) {
 						const duration = await getPodcastDuration(podcast.audioUrl)
-						await savePodcasttoDatabase(podcast, s3Response.response, duration)
+						await savePodcastToDatabase(podcast, s3Response.response, duration)
 						console.log('podcast saved')
 					}
 				} catch (err) {
@@ -30,11 +31,11 @@ module.exports = async function () {
 }
 
 const checkPodcast = async (link) => {
-	const podcastRes = await checkPodcastByOriginalLink(link)
-	return podcastRes
+	const podcastRes = await Podcast.findOne({ originalAudioLink: link }).lean()
+	return podcastRes && podcastRes.link
 }
 
-const savePodcasttoDatabase = async (podcast, s3Response, duration) => {
+const savePodcastToDatabase = async (podcast, s3Response, duration) => {
 	const podcastObj = {
 		author: podcast.sourceName,
 		title: podcast.title,
@@ -51,5 +52,5 @@ const savePodcasttoDatabase = async (podcast, s3Response, duration) => {
 		programInEnglish: podcast.programInEnglish,
 	}
 
-	await create(podcastObj)
+	await Podcast.create(podcastObj)
 }
