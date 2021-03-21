@@ -10,12 +10,8 @@ const categories = [
 	{ name: 'technology', weight: 4 },
 	{ name: 'agriculture', weight: 4 },
 	{ name: 'share', weight: 4 },
-	{ name: 'cartoon', weight: 8 },
 ]
-
-const trendingCategories = ['Politics', 'Media', 'Actor', 'Singer', 'Others']
 
 module.exports = {
 	categories,
-	trendingCategories,
 }

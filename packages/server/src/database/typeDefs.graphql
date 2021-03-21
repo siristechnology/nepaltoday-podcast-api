@@ -2,151 +2,30 @@ type Publiisher {
 	title: String!
 }
 
-type Article {
-	_id: String!
+type Program {
 	title: String!
-	shortDescription: String
-	content: String
-	link: String
-	imageLink: String
-	source: Source
-	category: String
-	publishedDate: String
+	titleInEnglish: String!
+	imageURL: String!
+	category: String!
+}
+
+type Podcast {
+	title: String!
+	description: String!
+	imageURL: String!
+	originalAudioLink: String!
+	audioLink: String!
+	durationInSeconds: Float!
+	category: String!
 	createdDate: String
 	modifiedDate: String
-	topic: String
-	tags: [String]
-	totalWeight: Float
-	likes: [NidObj]
-	dislikes: [NidObj]
 }
 
-type NidObj {
-	nid: String
-}
-
-input ArticleCriteria {
-	lastArticleId: String
-	lastQueryDate: String
-	categories: [ArticleCriteriaCategory]
-	nid: String
-}
-
-input ArticleCriteriaCategory {
-	name: String
-	count: Int
-}
-
-type Source {
-	_id: String
-	name: String
-	url: String
-	category: String
-	link: String
-	logoLink: String
-}
-
-type TwitterHandle {
-	_id: String!
-	name: String
-	handle: String!
-	category: String
-	userWeight: String
-	categoryWeight: String
-}
-
-type Tweet {
-	_id: String!
-	text: String
-	tweetId: String
-	handle: String
-	twitterHandle: TwitterHandle
-	publishedDate: String
-	createdAt: String
-	name: String
-	profileImage: String
-	description: String
-}
-
-input TweetCriteria {
-	lastTweetId: String
-	lastQueryDate: String
-}
-
-type CoronaStats {
-	createdDate: String
-	stats: [CoronaMetrics]
-	worldSummary: worldSummary
-	source: String
-}
-
-type worldSummary {
-	totalCases: Int
-	newCases: Int
-	totalDeaths: Int
-	newDeaths: Int
-}
-
-type CoronaMetrics {
-	country: String
-	total_cases: Int
-	total_deaths: Int
-	new_cases: Int
-	new_deaths: Int
-}
-
-type DistrictCoronaStats {
-	createdDate: String
-	timeLine: coronaTimeLine
-	districts: [DistrictCoronaMetrics]
-	source: String
-}
-
-type coronaTimeLine {
-	date: String
-	totalCases: Int
-	newCases: Int
-	totalRecoveries: Int
-	newRecoveries: Int
-	totalDeaths: Int
-	newDeaths: Int
-}
-
-type DistrictCoronaMetrics {
-	name: String
-	nepaliName: String
-	totalCases: Int
-	newCases: Int
-	activeCases: Int
-	recovered: Int
-	deaths: Int
-}
-
-type TrendingHandle {
-	name: String
-	handle: String
-	searchTerms: [String]
-	image: String
-}
-
-type TrendingTweetCount {
-	createdDate: String
-	createdAt: String
-	trendings: [TrendingArr]
-	counts: [TrendingMetric]
-}
-
-type TrendingArr {
-	category: String
-	counts: [TrendingMetric]
-}
-
-type TrendingMetric {
-	name: String
-	nepaliName: String
-	handle: String
-	count: Int
-	image: String
+type User {
+	name: String!
+	firebaseUid: String!
+	profileImage: String!
+	provider: String!
 }
 
 type WeatherInfo {
@@ -166,81 +45,26 @@ type FM {
 	province: String
 }
 
-type NepaliEvent {
-	isHoliday: Boolean 
-	tithi: String 
-	event: String 
-	day: String
-	dayInEn: String 
-	en: String
-}
-
 type MyFm {
 	allFm: [FM]
 	favoriteFm: [FM]
 }
 
-type TrendingTag {
-	tags: [String]
-	createdAt: String
-}
-
-type CategoryData {
-	category: String
-	data: Int
-}
-
-type ReadCategoryStat {
-	weekStat: [CategoryData]
-	monthStat: [CategoryData]
-}
-
 type Query {
-	getArticles(criteria: ArticleCriteria): [Article]!
-	getTweets(criteria: TweetCriteria): [Tweet]!
-	getArticle(_id: String!): Article
-	getIndividualArticles(name: String): [Article]
-	getArticlesFromTag(tag: String): [Article]
-	getLatestCoronaStats: CoronaStats
+	getPodcasts: [Podcast]!
 	getWeatherInfo: WeatherInfo
-	getDistrictCoronaStats: DistrictCoronaStats
-	getTrending: TrendingTweetCount
-	getTweetByHandle(handle: String): [Tweet]
 	getFmList: [FM]
 	getMyFavoriteFm(nid: String): [FM]
 	getMyFm(nid: String): MyFm
-	getNepaliEvent(date: String): NepaliEvent
-	getTrendingTags: TrendingTag
-	getReadCategoryData: ReadCategoryStat
 }
 
 type Response {
 	success: Boolean
 }
 
-input StoreFcmInput {
-	nid: String!
-	fcmToken: String!
-	countryCode: String
-	timeZone: String
-	createdDate: String
-	modifiedDate: String
-}
-
 input SaveFavorite {
 	nid: String!
 	fmId: String
-}
-
-input SaveReadArticle {
-	nid: String!
-	articles: [ReadArticleArr]
-}
-
-input ReadArticleArr {
-	articleId: String
-	category: String
-	createdDate: String
 }
 
 input PostLikeObj {
@@ -254,13 +78,13 @@ input RemoveLikeObj {
 	articleId: String
 }
 
+input UserInput {
+	name: String!
+	firebaseUid: String
+	profileImage: String
+	provider: String
+}
+
 type Mutation {
-	storeFcmToken(input: StoreFcmInput): Response
-	saveFavorite(input: SaveFavorite): Response
-	deleteFavorite(input: SaveFavorite): Response
-	saveReadArticle(input: SaveReadArticle): Response
-	postLike(input: PostLikeObj): Response
-	postDislike(input: PostLikeObj): Response
-	removeLike(input: RemoveLikeObj): Response
-	removeDislike(input: RemoveLikeObj): Response
+	saveUser(input: UserInput): Response
 }

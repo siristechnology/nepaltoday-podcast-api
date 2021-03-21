@@ -2,7 +2,7 @@ require('dotenv').config()
 const Agenda = require('agenda')
 const logger = require('../../config/logger')
 
-const crawler = require('../NewsCrawlerTrigger/index')
+const crawler = require('../PodcastCrawler/index')
 const newsChecker = require('../newsChecker')
 
 module.exports = async function () {
@@ -10,18 +10,18 @@ module.exports = async function () {
 
 	const agenda = new Agenda({ db: { address: process.env.DATABASE_URL } })
 
-	agenda.define('crawl articles', async (job) => {
-		logger.info('crawl articles job started')
+	agenda.define('download podcasts', async (job) => {
+		logger.info('download podcasts job started')
 		crawler()
 	})
 
-	agenda.define('check news from sources', async (job) => {
-		logger.info('checking news job started')
+	agenda.define('check podcasts from sources', async (job) => {
+		logger.info('checking podcasts job started')
 		newsChecker()
 	})
 
 	await agenda.start()
 
-	await agenda.every('30 minutes', 'crawl articles')
-	await agenda.every('24 hours', 'check news from sources')
+	await agenda.every('30 minutes', 'download podcasts')
+	await agenda.every('24 hours', 'check podcasts from sources')
 }
