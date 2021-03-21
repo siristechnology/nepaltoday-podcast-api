@@ -1,7 +1,7 @@
-# NepalToday-Api
+# NepalToday-Podcast-Api
 
-A graphql based api endpoint for NepalToday mobile app and Admin Dashboard in React
-It is set to auto-deploy to https://dashboard.heroku.com/apps/nepaltoday-api-qa
+A graphql based api endpoint for NepalToday Podcast mobile app and Admin Dashboard in React
+It is set to auto-deploy to https://dashboard.heroku.com/apps/nepaltoday-podcast-api-qa
 
 ![Node CI](https://github.com/siristechnology/nepaltoday-api/workflows/Node%20CI/badge.svg?branch=master)
 [![DeepScan grade](https://deepscan.io/api/teams/5348/projects/7147/branches/66890/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=5348&pid=7147&bid=66890)
@@ -10,6 +10,12 @@ It is set to auto-deploy to https://dashboard.heroku.com/apps/nepaltoday-api-qa
 ### GraphQL
 
 ![graphql](/packages/server/assets/images/graphql-interface.png)
+
+### Prerequisites
+
+* MongoDB
+* Node 14+
+
 
 ## Steps to run
 
