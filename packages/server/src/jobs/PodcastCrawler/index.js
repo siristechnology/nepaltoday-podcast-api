@@ -42,7 +42,7 @@ const savePodcastToDatabase = async (podcast, s3Response, duration) => {
 		author: podcast.sourceName,
 		title: podcast.title,
 		description: podcast.excerpt,
-		imageUrl: podcast.imageLink,
+		imageUrl: podcast.imageUrl,
 		audioUrl: s3Response.Location,
 		originalAudioUrl: podcast.audioUrl,
 		link: podcast.link,
