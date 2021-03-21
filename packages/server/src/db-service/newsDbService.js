@@ -1,6 +1,6 @@
 const { Article, FacebookPosts } = require('./database/mongooseSchema')
 const logger = require('../config/logger')
-const SourceConfig = require('../config/news-source-config.json')
+const SourceConfig = require('../config/source-config.json')
 
 module.exports = {
 	saveArticles: async (articles) => {

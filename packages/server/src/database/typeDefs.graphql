@@ -1,3 +1,7 @@
+type Publiisher {
+	title: String!
+}
+
 type Article {
 	_id: String!
 	title: String!

@@ -7,12 +7,10 @@ const { categories } = require('../config/category')
 const getWeather = require('../weather')
 const logger = require('../config/logger')
 const { Tweet, FavoriteFM, ReadArticle } = require('../db-service/database/mongooseSchema')
-const SourceConfig = require('../config/news-source-config.json')
+const SourceConfig = require('../config/source-config.json')
 const { fmDetails } = require('./../config/fm')
 const { calculateTotalWeights } = require('./calculateTotalWeights')
 const { NepaliEvents } = require('../config/nepaliCalender')
-const { getTwitterHandles } = require('../db-service/TweetDbService')
-const trendingTagDbService = require('../db-service/trendingTagDbService')
 
 module.exports = {
 	Query: {
@@ -69,27 +67,6 @@ module.exports = {
 				...article,
 				source: { name: source.nepaliName, url: source.link, logoLink: process.env.SERVER_BASE_URL + source.logoLink },
 			}
-		},
-
-		getIndividualArticles: async (parent, { name }) => {
-			const articles = await Article.find({ tags: name }).lean().sort({ _id: -1 })
-			const individualHandle = (await getTwitterHandles()).filter(x => x.nepaliName==name)[0]
-			let articleFlattened = _.flatten(articles)
-			if(individualHandle){
-				const individualNewsCategories = individualHandle.newsCategories
-				articleFlattened = articleFlattened.filter(x => individualNewsCategories.includes(x.category)).slice(0,20)
-			}
-			const articleList = articleFlattened.map((article) => {
-				const mySource = SourceConfig.find((x) => x.sourceName === article.sourceName)
-				article.source = {
-					_id: mySource.name,
-					name: mySource.nepaliName,
-					url: mySource.link,
-					logoLink: process.env.SERVER_BASE_URL + mySource.logoLink,
-				}
-				return article
-			})
-			return articleList
 		},
 
 		getArticlesFromTag: async (parent, { tag }) => {
@@ -185,7 +162,7 @@ module.exports = {
 			})
 			return {
 				allFm: fmDetails,
-				favoriteFm: myFavoriteFm
+				favoriteFm: myFavoriteFm,
 			}
 		},
 
@@ -199,11 +176,6 @@ module.exports = {
 			return currentDay
 		},
 
-		getTrendingTags: async (parent, {}) => {
-			const trendingTags = await trendingTagDbService.getTrendingTags()
-			return trendingTags
-		},
-
 		getReadCategoryData: async (parent, args, {}) => {
 			//this week
 			const currentDate = new Date()
@@ -212,23 +184,23 @@ module.exports = {
 			const weekData = await ReadArticle.find({
 				'article.createdDate': {
 					$lte: currentDate,
-					$gte: oneWeekBeforeDate
-				}
+					$gte: oneWeekBeforeDate,
+				},
 			})
 
 			let totalWeekArticles = []
-			weekData.forEach(singleUser=>{
+			weekData.forEach((singleUser) => {
 				const myArticle = singleUser.article || []
-				const weekArticles = myArticle.filter(x => x.createdDate<=currentDate && x.createdDate>=oneWeekBeforeDate)
+				const weekArticles = myArticle.filter((x) => x.createdDate <= currentDate && x.createdDate >= oneWeekBeforeDate)
 				totalWeekArticles = totalWeekArticles.concat(weekArticles)
 			})
 
 			let weekStats = []
-			categories.forEach(category => {
-				const myCatArticle = totalWeekArticles.filter(x => x.category == category.name).length
+			categories.forEach((category) => {
+				const myCatArticle = totalWeekArticles.filter((x) => x.category == category.name).length
 				weekStats.push({
 					category: category.name,
-					data: myCatArticle
+					data: myCatArticle,
 				})
 			})
 
@@ -238,31 +210,31 @@ module.exports = {
 			const monthData = await ReadArticle.find({
 				'article.createdDate': {
 					$lte: currentDate,
-					$gte: oneMonthBeforeDate
-				}
+					$gte: oneMonthBeforeDate,
+				},
 			})
 
 			let totalMonthArticles = []
-			monthData.forEach(singleUser=>{
+			monthData.forEach((singleUser) => {
 				const myArticle = singleUser.article || []
-				const monthArticles = myArticle.filter(x => x.createdDate<=currentDate && x.createdDate>=oneMonthBeforeDate)
+				const monthArticles = myArticle.filter((x) => x.createdDate <= currentDate && x.createdDate >= oneMonthBeforeDate)
 				totalMonthArticles = totalMonthArticles.concat(monthArticles)
 			})
 
 			let monthStats = []
-			categories.forEach(category => {
-				const myCatArticle = totalMonthArticles.filter(x => x.category == category.name).length
+			categories.forEach((category) => {
+				const myCatArticle = totalMonthArticles.filter((x) => x.category == category.name).length
 				monthStats.push({
 					category: category.name,
-					data: myCatArticle
+					data: myCatArticle,
 				})
 			})
 
 			return {
 				weekStat: weekStats,
-				monthStat: monthStats
+				monthStat: monthStats,
 			}
-		}
+		},
 	},
 
 	Mutation: {

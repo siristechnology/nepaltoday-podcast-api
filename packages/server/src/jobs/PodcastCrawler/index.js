@@ -1,6 +1,6 @@
 const NewsCrawler = require('news-crawler')
 const { saveArticles } = require('../../db-service/newsDbService')
-const SourceConfig = require('../../config/news-source-config.json')
+const SourceConfig = require('../../config/source-config.json')
 const logger = require('../../config/logger')
 const { getTagsFromArticle, assignWeights } = require('./helper')
 const { Article, TrendingTopic } = require('../../db-service/database/mongooseSchema')
@@ -13,15 +13,15 @@ module.exports = async function () {
 		let articles = await NewsCrawler(SourceConfig, { headless: true })
 		articles = articles.filter((a) => a.imageLink !== null)
 
-		let cartoonArticles = articles.filter(x=>x.category=='cartoon')
-		cartoonArticles = cartoonArticles.map(article=>{
+		let cartoonArticles = articles.filter((x) => x.category == 'cartoon')
+		cartoonArticles = cartoonArticles.map((article) => {
 			article.title = article.imageLink
 			return article
 		})
-		const exceptCartoonArticles = articles.filter(x=>x.category!='cartoon')
+		const exceptCartoonArticles = articles.filter((x) => x.category != 'cartoon')
 
 		let dateConvertedCartoonArticles = []
-		cartoonArticles.map(article=>{
+		cartoonArticles.map((article) => {
 			dateConvertedCartoonArticles.push(convertArticleDateToAD(article))
 		})
 

@@ -1,5 +1,5 @@
 const NewsCrawler = require('news-crawler')
-const SourceConfig = require('../../../config/news-source-config.json')
+const SourceConfig = require('../../../config/source-config.json')
 
 jest.setTimeout(120000)
 

@@ -1,0 +1,126 @@
+[
+    {
+        "id": "playerfm",
+        "sourceName": "Player FM",
+        "imageUrl": "/assets/playerfm.png",
+        "pages": [
+            {
+                "programId": "HamroAwaz",
+                "program": "Hamro Awaz",
+                "programInEnglish": "Hamro Awaz",
+                "url": "https://player.fm/series/hamro-awaz",
+                "category": "social",
+                "link-selector": "main > div > article > div.headline > div.info > header > h3 > span > a"
+            },
+            {
+                "programId": "BojuBajai",
+                "program": "Boju Bajai",
+                "programInEnglish": "Boju Bajai",
+                "url": "https://player.fm/series/boju-bajai",
+                "category": "social",
+                "link-selector": "main > div > article > div.headline > div.info > header > h3 > span > a"
+            },
+            {
+                "programId": "AwrNepali",
+                "program": "AWR Nepali:Nepalese:नेपाली(Sabbath School)",
+                "programInEnglish": "AWR Nepali",
+                "url": "https://player.fm/series/awr-nepali-nepalese-sabbath-school",
+                "category": "knowledge",
+                "link-selector": "main > div > article > div.headline > div.info > header > h3 > span > a"
+            },
+            {
+                "programId": "RandomNepali",
+                "program": "Random Nepali Podcast",
+                "programInEnglish": "Random Nepali Podcast",
+                "url": "https://player.fm/series/random-nepali-podcast",
+                "category": "entertainment",
+                "link-selector": "main > div > article > div.headline > div.info > header > h3 > span > a"
+            }
+        ],
+        "article-detail-selectors": {
+            "title": "div.main-content.episodes > div > div > h2 > a",
+            "excerpt": "div.main-content.episodes > div > div > div.story.cleanslate > div",
+            "lead-image": "div.col-md-3.series-summary > div > div > a > div > img",
+            "content": [],
+            "audio-url": "div.main-content.episodes > div > div > div.main-buttons > div.episode.paused > a"
+        }
+    },
+    {
+        "id": "Ujyalo",
+        "sourceName": "Ujyalo",
+        "imageUrl": "/assets/ujyalo.png",
+        "pages": [
+            {
+                "programId": "sikdai",
+                "program": "सिक्दै सिकाउँदै",
+                "programInEnglish": "Sikdai Sikaudai",
+                "url": "https://ujyaaloonline.com/radio-program-detail/sikdai-sikaudai",
+                "category": "education",
+                "link-selector": "section > div > div > div > div > div > div > div > div > h4 > a"
+            },
+            {
+                "programId": "HamroKhagol",
+                "program": "हाम्रो खगोल",
+                "programInEnglish": "Hamro Khagol",
+                "url": "https://ujyaaloonline.com/radio-program-detail/Hamro-Khagol",
+                "category": "social",
+                "link-selector": "section > div > div > div > div > div > div > div > div > h4 > a"
+            },
+            {
+                "programId": "Bewasayaka",
+                "program": "व्यवसायका लागि बैंक",
+                "programInEnglish": "Bewasayaka Lagi Bank",
+                "url": "https://ujyaaloonline.com/radio-program-detail/ByabasayaKa_lagi_Bank",
+                "category": "business",
+                "link-selector": "section > div > div > div > div > div > div > div > div > h4 > a"
+            },
+            {
+                "programId": "CoronaCapsule",
+                "program": "कोरोना क्याप्सुल",
+                "programInEnglish": "Corona Capsule",
+                "url": "https://ujyaaloonline.com/radio-program-detail/Corona-capsule",
+                "category": "health",
+                "link-selector": "section > div > div > div > div > div > div > div > div > h4 > a"
+            },
+            {
+                "programId": "Kayakairan",
+                "program": "कायाकैरन",
+                "programInEnglish": "Kayakairan",
+                "url": "https://ujyaaloonline.com/radio-program-detail/kayakairan",
+                "category": "news",
+                "link-selector": "section > div > div > div > div > div > div > div > div > h4 > a"
+            },
+            {
+                "programId": "DeshPradesh",
+                "program": "देश परदेश (अडियाे)",
+                "programInEnglish": "Desh Pradesh",
+                "url": "https://ujyaaloonline.com/radio-program-detail/desh-paradesh-radio-program",
+                "category": "social",
+                "link-selector": "section > div > div > div > div > div > div > div > div > h4 > a"
+            },
+            {
+                "programId": "SadakRaSawari",
+                "program": "सडक र सवारी",
+                "programInEnglish": "Sadak ra Sawari",
+                "url": "https://ujyaaloonline.com/radio-program-detail/sadak-ra-sawari",
+                "category": "social",
+                "link-selector": "section > div > div > div > div > div > div > div > div > h4 > a"
+            },
+            {
+                "programId": "AjarAmarGeetharu",
+                "program": "अजर अमर गीतहरु",
+                "programInEnglish": "Ajar Amar Geetharu",
+                "url": "https://ujyaaloonline.com/radio-program-detail/azar-amar-geet",
+                "category": "song",
+                "link-selector": "section > div > div > div > div > div > div > div > div > h4 > a"
+            }
+        ],
+        "article-detail-selectors": {
+            "title": "section > div > div > div > div > div > h3",
+            "excerpt": "section > div > div > div > div.blog-details > h1",
+            "lead-image": "section > div > div > div > div > div > img",
+            "content": [],
+            "audio-url": "div > div.jp-details > a"
+        }
+    }
+]

@@ -1,5 +1,5 @@
 require('dotenv').config()
-const SourceConfig = require('../../config/news-source-config.json')
+const SourceConfig = require('../../config/source-config.json')
 const { categories } = require('../../config/category')
 
 const assignWeights = (articles) => {
