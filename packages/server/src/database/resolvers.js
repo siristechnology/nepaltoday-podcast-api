@@ -9,7 +9,7 @@ const { calculateTotalWeights } = require('./calculateTotalWeights')
 
 module.exports = {
 	Query: {
-		getPodcasts: async (parent, args, { Podcast }) => {
+		getTopPodcasts: async (parent, args, { Podcast }) => {
 			args.criteria = args.criteria || {}
 			args.criteria.categories = args.criteria.categories || categories
 			args.criteria.nid = args.criteria.nid || ''
@@ -35,9 +35,16 @@ module.exports = {
 			const podcastList = podcastFlattened.map((podcast) => {
 				const publisher = SourceConfig.find((x) => x.sourceId === podcast.publisherId)
 				podcast.publisher = {
-					id: publisher.id,
-					name: publisher.sourceName,
+					id: publisher.sourceId,
+					title: publisher.sourceName,
 					imageUrl: process.env.SERVER_BASE_URL + publisher.imageUrl,
+				}
+				const program = publisher.pages.find((p) => p.programId === podcast.programId)
+				podcast.program = {
+					id: program.programId,
+					title: program.program,
+					imageUrl: program.imageUrl,
+					category: program.category,
 				}
 				return podcast
 			})

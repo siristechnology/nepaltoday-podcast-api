@@ -1,8 +1,11 @@
 type Publiisher {
+	id: String!
 	title: String!
+	imageUrl: String!
 }
 
 type Program {
+	id: String!
 	title: String!
 	titleInEnglish: String!
 	imageUrl: String!
@@ -17,6 +20,9 @@ type Podcast {
 	audioUrl: String!
 	durationInSeconds: Float!
 	category: String!
+	publisher: Publiisher
+	program: Program
+	totalWeight: Float
 	createdDate: String
 	modifiedDate: String
 }
@@ -51,7 +57,7 @@ type MyFm {
 }
 
 type Query {
-	getPodcasts: [Podcast]!
+	getTopPodcasts: [Podcast]!
 	getWeatherInfo: WeatherInfo
 	getFmList: [FM]
 	getMyFavoriteFm(nid: String): [FM]
