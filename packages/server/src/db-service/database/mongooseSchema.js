@@ -12,6 +12,8 @@ const Podcast = mongoose.model(
 		audioUrl: String,
 		durationInSeconds: Number,
 		category: String,
+		programId: String,
+		publisherId: String,
 		createdDate: { type: Date, default: Date.now },
 		modifiedDate: { type: Date, default: Date.now },
 		createdAt: { type: Date, expires: expiryTime, default: Date.now },

@@ -3,21 +3,21 @@ const PodcastCrawler = require('news-crawler')
 const uploadHelper = require('./uploadHelper')
 const { Podcast } = require('../../db-service/database/mongooseSchema')
 
-const getPodcastDuration = require('./getPodcastDuration')
+const getPodcastDurationInSeconds = require('./getPodcastDurationInSeconds')
 
 module.exports = async function () {
 	try {
 		let podcasts = await PodcastCrawler(SourceConfig, { headless: true, articleUrlLength: 3 })
-		podcasts = podcasts.filter((x) => x.imageLink.length > 5)
 		podcasts = podcasts.filter((x) => x.audioUrl.length > 5)
+
 		for (const podcast of podcasts) {
-			const podcastSaved = await checkPodcast(podcast.audioUrl)
+			const podcastSaved = await isPodcaseInDb(podcast.audioUrl)
 			if (!podcastSaved) {
 				try {
 					const s3Response = await uploadHelper(podcast)
 					if (s3Response.success) {
-						const duration = await getPodcastDuration(podcast.audioUrl)
-						await savePodcastToDatabase(podcast, s3Response.response, duration)
+						const durationInSeconds = await getPodcastDurationInSeconds(podcast.audioUrl)
+						await savePodcastToDatabase(podcast, s3Response.response, durationInSeconds)
 						console.log('podcast saved')
 					}
 				} catch (err) {
@@ -30,27 +30,20 @@ module.exports = async function () {
 	}
 }
 
-const checkPodcast = async (link) => {
+const isPodcaseInDb = async (link) => {
 	const podcastRes = await Podcast.findOne({ originalAudioUrl: link }).lean()
 	return podcastRes && podcastRes.link
 }
 
-const savePodcastToDatabase = async (podcast, s3Response, duration) => {
-	console.log('printing podcast', podcast)
-
+const savePodcastToDatabase = async (podcast, s3Response, durationInSeconds) => {
 	const podcastObj = {
+		...podcast,
 		author: podcast.sourceName,
-		title: podcast.title,
 		description: podcast.excerpt,
-		imageUrl: podcast.imageUrl,
 		audioUrl: s3Response.Location,
 		originalAudioUrl: podcast.audioUrl,
-		link: podcast.link,
-		duration: duration.duration,
-		durationInSeconds: duration.durationInSeconds,
-		category: podcast.category,
-		program: podcast.program,
-		programInEnglish: podcast.programInEnglish,
+		durationInSeconds,
+		publisherId: podcast.sourceId,
 	}
 
 	await Podcast.create(podcastObj)

@@ -1,6 +1,5 @@
 /* eslint-disable eqeqeq */
 const _ = require('lodash')
-const { Podcast, User, FavoriteFM } = require('../db-service/database/mongooseSchema')
 const { categories } = require('../config/category')
 const getWeather = require('../weather')
 const logger = require('../config/logger')
@@ -10,15 +9,14 @@ const { calculateTotalWeights } = require('./calculateTotalWeights')
 
 module.exports = {
 	Query: {
-		getPodcasts: async (parent, args, { Article }) => {
+		getPodcasts: async (parent, args, { Podcast }) => {
 			args.criteria = args.criteria || {}
 			args.criteria.categories = args.criteria.categories || categories
 			args.criteria.nid = args.criteria.nid || ''
 			const promises = args.criteria.categories.map(async (category) => {
 				const _podcasts = await Podcast.find({
 					category: category.name,
-					link: { $ne: null },
-					_id: { $gt: args.criteria.lastArticleId },
+					audioUrl: { $ne: null },
 				})
 					.lean()
 					.sort({ _id: -1 })
@@ -30,16 +28,16 @@ module.exports = {
 			})
 
 			const podcasts = await Promise.all(promises)
+
 			let podcastFlattened = _.flatten(podcasts)
 			podcastFlattened = podcastFlattened.sort((a, b) => b.totalWeight - a.totalWeight)
 
 			const podcastList = podcastFlattened.map((podcast) => {
-				const mySource = SourceConfig.find((x) => x.sourceName === podcast.sourceName)
-				podcast.source = {
-					_id: mySource.name,
-					name: mySource.nepaliName,
-					url: mySource.link,
-					logoLink: process.env.SERVER_BASE_URL + mySource.logoLink,
+				const publisher = SourceConfig.find((x) => x.sourceId === podcast.publisherId)
+				podcast.publisher = {
+					id: publisher.id,
+					name: publisher.sourceName,
+					imageUrl: process.env.SERVER_BASE_URL + publisher.imageUrl,
 				}
 				return podcast
 			})

@@ -1,6 +1,6 @@
 [
     {
-        "id": "playerfm",
+        "sourceId": "playerfm",
         "sourceName": "Player FM",
         "imageUrl": "/assets/playerfm.png",
         "pages": [
@@ -50,7 +50,7 @@
         }
     },
     {
-        "id": "Ujyalo",
+        "sourceId": "Ujyalo",
         "sourceName": "Ujyalo",
         "imageUrl": "/assets/ujyalo.png",
         "pages": [

@@ -35,12 +35,11 @@
 		"morgan": "1.10.0",
 		"mp3-duration": "^1.1.0",
 		"nepali-date-converter": "^3.3.0",
-		"news-crawler": "https://github.com/siristechnology/news-crawler#master",
+		"news-crawler": "https://github.com/siristechnology/news-crawler#7f25eb4",
 		"offline-geo-from-ip": "^1.0.1",
 		"pm2": "4.4.0",
 		"request-promise": "^4.2.6",
 		"require-graphql-file": "1.0.1",
-		"twitter": "1.7.1",
 		"winston": "3.3.3"
 	},
 	"devDependencies": {
