@@ -60,6 +60,7 @@ module.exports = {
 
 		getProgramDetail: async (parent, args) => {
 			const program = Programs.find((p) => p.id == args.id)
+			const publisher = SourceConfig.find((x) => x.sourceId === program.publisher.id)
 
 			if (program) {
 				program.podcasts = await Podcast.find({
@@ -68,6 +69,20 @@ module.exports = {
 					.lean()
 					.sort({ _id: -1 })
 					.limit(20)
+
+				program.podcasts.forEach((pod) => {
+					pod.program = {
+						id: program.programId,
+						title: program.program,
+						imageUrl: program.imageUrl,
+						category: program.category,
+					}
+					pod.publisher = {
+						id: publisher.sourceId,
+						title: publisher.sourceName,
+						imageUrl: process.env.SERVER_BASE_URL + publisher.imageUrl,
+					}
+				})
 			}
 
 			return program
