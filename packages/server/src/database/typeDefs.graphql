@@ -1,4 +1,4 @@
-type Publiisher {
+type Publisher {
 	id: String!
 	title: String!
 	imageUrl: String!
@@ -11,6 +11,7 @@ type Program {
 	imageUrl: String!
 	category: String!
 	podcasts: [Podcast]
+	publisher: Publisher
 }
 
 type Podcast {
@@ -22,7 +23,7 @@ type Podcast {
 	audioUrl: String!
 	durationInSeconds: Float!
 	category: String!
-	publisher: Publiisher
+	publisher: Publisher
 	program: Program
 	totalWeight: Float
 	createdDate: String
@@ -53,7 +54,7 @@ type MyFm {
 type Query {
 	getTopPodcasts: [Podcast]!
 	getAllPrograms: [Program]!
-	getProgramDetail(id: String): Program!
+	getProgramDetail(id: String!): Program!
 	getFmList: [FM]
 	getMyFavoriteFm(nid: String): [FM]
 	getMyFm(nid: String): MyFm
