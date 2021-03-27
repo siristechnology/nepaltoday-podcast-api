@@ -18,7 +18,7 @@
                 "program": "Boju Bajai",
                 "programInEnglish": "Boju Bajai",
                 "url": "https://player.fm/series/boju-bajai",
-                "imageUrl": "https://player.fm/static/images/256pixel.png",
+                "imageUrl": "https://cdn.player.fm/images/22084357/series/TIXhWuIqenGZPDIo/512.jpg",
                 "category": "Social",
                 "link-selector": "main > div > article > div.headline > div.info > header > h3 > span > a"
             },
@@ -36,7 +36,7 @@
                 "program": "Random Nepali Podcast",
                 "programInEnglish": "Random Nepali Podcast",
                 "url": "https://player.fm/series/random-nepali-podcast",
-                "imageUrl": "https://player.fm/static/images/256pixel.png",
+                "imageUrl": "https://cdn.player.fm/images/23181667/series/RnnlT58VeAZmEpJb/512.jpg",
                 "category": "Entertainment",
                 "link-selector": "main > div > article > div.headline > div.info > header > h3 > span > a"
             }
