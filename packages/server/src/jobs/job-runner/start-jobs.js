@@ -2,7 +2,7 @@ require('dotenv').config()
 const Agenda = require('agenda')
 const logger = require('../../config/logger')
 
-const crawler = require('../podcastCrawler/index')
+const crawler = require('../podcastCrawlerJob/index')
 
 module.exports = async function () {
 	logger.info('starting jobs')

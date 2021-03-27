@@ -1,4 +1,4 @@
-const SourceConfig = require('./../../config/source-config.json')
+const SourceConfig = require('../../config/source-config.json')
 const PodcastCrawler = require('news-crawler')
 const uploadHelper = require('./uploadHelper')
 const { Podcast } = require('../../db-service/database/mongooseSchema')
