@@ -109,10 +109,10 @@ module.exports = {
 
 			const credential = firebase.auth.GoogleAuthProvider.credential(null, accessToken)
 			const firebaseRes = await firebase.auth().signInWithCredential(credential)
-			const firebaseUser = await User.find({ firebaseUid: firebaseRes.user.uid })
+			const firebaseUser = await User.findOne({ firebaseUid: firebaseRes.user.uid })
 
 			if (firebaseUser) {
-				return { id: firebaseUser._id }
+				return { id: firebaseUser._id, success: true }
 			} else {
 				const response = await User.update(
 					{ firebaseUid: firebaseRes.user.uid },
@@ -128,7 +128,7 @@ module.exports = {
 					{ upsert: true },
 				)
 
-				return { success: !!response.ok, id: firebaseUser._id }
+				return { id: response.upserted._id, success: !!response.ok }
 			}
 		},
 	},
