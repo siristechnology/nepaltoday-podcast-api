@@ -23,9 +23,9 @@ const Podcast = mongoose.model(
 const User = mongoose.model(
 	'User',
 	new Schema({
-		nid: { type: String, unique: true },
 		name: { type: String, required: true },
 		firebaseUid: { type: String, unique: true },
+		imageUrl: String,
 		countryCode: String,
 		timeZone: String,
 		ipAddress: String,

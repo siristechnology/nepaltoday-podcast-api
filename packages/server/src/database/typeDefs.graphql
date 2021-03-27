@@ -32,7 +32,7 @@ type Podcast {
 type User {
 	name: String!
 	firebaseUid: String!
-	profileImage: String!
+	imageUrl: String!
 	provider: String!
 }
 
@@ -60,7 +60,8 @@ type Query {
 }
 
 type Response {
-	success: Boolean
+	success: Boolean!
+	id: String
 }
 
 input SaveFavorite {
@@ -79,13 +80,14 @@ input RemoveLikeObj {
 	articleId: String
 }
 
-input UserInput {
-	name: String!
+input UserLoginInput {
+	name: String
 	firebaseUid: String
 	profileImage: String
+	accessToken: String!
 	provider: String
 }
 
 type Mutation {
-	saveUser(input: UserInput): Response
+	loginUser(loginInput: UserLoginInput): Response
 }

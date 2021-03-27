@@ -15,6 +15,8 @@ const Agenda = require('agenda')
 const Agendash = require('agendash')
 const GraphQlErrorLoggingPlugin = require('./config/graphql-error-logging')
 
+require('./config/firebaseInit')
+
 const isDevelopment = process.env.NODE_ENV === 'development'
 
 const app = express()

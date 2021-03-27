@@ -1,16 +1,17 @@
 /* eslint-disable eqeqeq */
+const firebase = require('firebase')
 const _ = require('lodash')
 const { categories } = require('../config/category')
 const logger = require('../config/logger')
 const SourceConfig = require('../config/source-config.json')
 const Programs = require('../config/programs')
-const { Podcast } = require('../db-service/database/mongooseSchema')
+const { Podcast, User } = require('../db-service/database/mongooseSchema')
 const { fmDetails } = require('./../config/fm')
 const { calculateTotalWeights } = require('./calculateTotalWeights')
 
 module.exports = {
 	Query: {
-		getTopPodcasts: async (parent, args, { Podcast }) => {
+		getTopPodcasts: async (parent, args) => {
 			args.criteria = args.criteria || {}
 			args.criteria.categories = args.criteria.categories || categories
 			args.criteria.nid = args.criteria.nid || ''
@@ -101,27 +102,34 @@ module.exports = {
 	},
 
 	Mutation: {
-		saveUser: async (parent, args, { ipAddress }) => {
-			const {
-				input: { nid, fcmToken, countryCode, timeZone, createdDate, modifiedDate },
-			} = args
+		loginUser: async (parent, args, { ipAddress }) => {
+			const { accessToken, provider } = args.loginInput
 
-			const response = await User.update(
-				{ nid },
-				{
-					$set: {
-						fcmToken,
-						countryCode,
-						timeZone,
-						ipAddress,
-						createdDate: createdDate || modifiedDate,
-						modifiedDate: modifiedDate || createdDate,
+			if (provider != 'google') throw Error('Only google auth is supported now')
+
+			const credential = firebase.auth.GoogleAuthProvider.credential(null, accessToken)
+			const firebaseRes = await firebase.auth().signInWithCredential(credential)
+			const firebaseUser = await User.find({ firebaseUid: firebaseRes.user.uid })
+
+			if (firebaseUser) {
+				return { id: firebaseUser._id }
+			} else {
+				const response = await User.update(
+					{ firebaseUid: firebaseRes.user.uid },
+					{
+						$set: {
+							name: firebaseRes.user.displayName,
+							firebaseUid: firebaseRes.user.uid,
+							imageUrl: firebaseRes.user.photoURL,
+							provider: credential.providerId,
+							ipAddress,
+						},
 					},
-				},
-				{ upsert: true },
-			)
+					{ upsert: true },
+				)
 
-			return { success: !!response.ok }
+				return { success: !!response.ok, id: firebaseUser._id }
+			}
 		},
 	},
 }
