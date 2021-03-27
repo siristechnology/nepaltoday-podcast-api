@@ -8,7 +8,7 @@ const Podcast = mongoose.model(
 		title: { type: String, required: true },
 		description: String,
 		imageUrl: String,
-		originalAudioUrl: String,
+		originalAudioUrl: { type: String, required: true, unique: true },
 		audioUrl: { type: String, required: true, unique: true },
 		durationInSeconds: Number,
 		category: String,
