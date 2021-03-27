@@ -67,7 +67,7 @@
 		"prettier": "2.0.5"
 	},
 	"engines": {
-		"node": "14.11.0",
+		"node": ">=14.11.0",
 		"npm": ">=6.2.0"
 	},
 	"keywords": [
