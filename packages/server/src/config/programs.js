@@ -8,7 +8,7 @@ SourceConfig.forEach((pub) => {
 		pgm.publisher = {
 			id: pub.sourceId,
 			title: pub.sourceName,
-			imageUrl: pub.imageUrl,
+			imageUrl: process.env.SERVER_BASE_URL + pub.imageUrl,
 		}
 		Programs.push(pgm)
 	})
