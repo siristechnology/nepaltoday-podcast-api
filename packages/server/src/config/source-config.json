@@ -2,7 +2,7 @@
     {
         "sourceId": "playerfm",
         "sourceName": "Player FM",
-        "imageUrl": "/assets/playerfm.png",
+        "imageUrl": "/assets/logos/playerfm.png",
         "pages": [
             {
                 "programId": "HamroAwaz",
@@ -52,7 +52,7 @@
     {
         "sourceId": "Ujyalo",
         "sourceName": "Ujyalo",
-        "imageUrl": "/assets/ujyalo.png",
+        "imageUrl": "/assets/logos/ujyalo.png",
         "pages": [
             {
                 "programId": "sikdai",
