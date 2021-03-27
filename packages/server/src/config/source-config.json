@@ -148,5 +148,30 @@
             "content": [],
             "audio-url": "div > div.jp-details > a"
         }
+    },
+    {
+        "sourceId": "dilbhusan",
+        "sourceName": "Dil Bhusan Pathak",
+        "imageUrl": "/assets/logos/dilbhusan.jpg",
+        "weight": 10,
+        "pages": [
+            {
+                "programId": "toughtalk",
+                "program": "टफटक वीथ दिलभूषण पाठक",
+                "programInEnglish": "TOUGH talk with Dil Bhusan Pathak",
+                "weight": 10,
+                "url": "https://podcasts.hamropatro.com/podcast/5649493246607360",
+                "imageUrl": "https://storage.googleapis.com/hamropatro-storage/assets/5199242528292864/images/5a0bb7c8-6870-4639-a6e5-559b64ac467e.jpg",
+                "category": "News",
+                "link-selector": "div[class^='podcast_episode_list'] div a"
+            }
+        ],
+        "article-detail-selectors": {
+            "title": "span[class^='episodePage_headingContent__title__']",
+            "excerpt": "div[class^='episodePage_textContent__']",
+            "lead-image": "div[class^='episodePage_podImage__'] > img",
+            "content": [],
+            "audio-url": "div[class^='player_player'] audio"
+        }
     }
 ]
