@@ -1,9 +1,10 @@
 /* eslint-disable eqeqeq */
 const _ = require('lodash')
 const { categories } = require('../config/category')
-const getWeather = require('../weather')
 const logger = require('../config/logger')
 const SourceConfig = require('../config/source-config.json')
+const Programs = require('../config/programs')
+const { Podcast } = require('../db-service/database/mongooseSchema')
 const { fmDetails } = require('./../config/fm')
 const { calculateTotalWeights } = require('./calculateTotalWeights')
 
@@ -52,24 +53,23 @@ module.exports = {
 			return podcastList
 		},
 
-		getWeatherInfo: async (parent, args, { ipAddress }) => {
-			try {
-				if (ipAddress === '::1' || ipAddress === '::ffff:127.0.0.1') ipAddress = '27.111.16.0'
-				logger.debug(`Printing ip: ${ipAddress}`)
+		getAllPrograms: async () => {
+			return Programs
+		},
 
-				const weatherInfo = await getWeather(ipAddress)
-				weatherInfo.ipAddress = ipAddress
+		getProgramDetail: async (parent, args) => {
+			const program = Programs.find((p) => p.id == args.id)
 
-				return {
-					ipAddress: ipAddress,
-					temperature: weatherInfo.main.temp,
-					condition: weatherInfo.weather[0].main,
-					description: weatherInfo.weather[0].description,
-					place: weatherInfo.name,
-				}
-			} catch (error) {
-				logger.error(`Error to getWeatherInfo for ip: ${ipAddress}`)
+			if (program) {
+				program.podcasts = await Podcast.find({
+					programId: program.id,
+				})
+					.lean()
+					.sort({ _id: -1 })
+					.limit(20)
 			}
+
+			return program
 		},
 
 		getFmList: async (parent, args, { FM }) => {

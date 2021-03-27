@@ -10,6 +10,7 @@ type Program {
 	titleInEnglish: String!
 	imageUrl: String!
 	category: String!
+	podcasts: [Podcast]
 }
 
 type Podcast {
@@ -34,14 +35,6 @@ type User {
 	provider: String!
 }
 
-type WeatherInfo {
-	ipAddress: String
-	temperature: Float!
-	condition: String
-	description: String
-	place: String
-}
-
 type FM {
 	id: String
 	url: String
@@ -58,7 +51,8 @@ type MyFm {
 
 type Query {
 	getTopPodcasts: [Podcast]!
-	getWeatherInfo: WeatherInfo
+	getAllPrograms: [Program]!
+	getProgramDetail(id: String): Program!
 	getFmList: [FM]
 	getMyFavoriteFm(nid: String): [FM]
 	getMyFm(nid: String): MyFm
