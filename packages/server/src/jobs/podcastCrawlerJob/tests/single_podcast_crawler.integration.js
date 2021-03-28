@@ -1,7 +1,7 @@
 const PodcastCrawler = require('news-crawler')
 const SourceConfig = require('../../../config/source-config.json')
 
-jest.setTimeout(120000)
+jest.setTimeout(40000)
 
 describe('podcast-crawler', () => {
 	it('ToughTalk with Dil Bhusan podcast can be scraped', async () => {
@@ -36,6 +36,7 @@ describe('podcast-crawler', () => {
 		const podcasts = await PodcastCrawler([source], { headless: true, articleUrlLength: 3 })
 
 		expect(podcasts.length).toBeGreaterThan(0)
+		expect(podcasts[0].audioUrl).toBeTruthy()
 	})
 
 	it('Kayakairan podcast can be scraped', async () => {

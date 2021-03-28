@@ -246,7 +246,7 @@
             "excerpt": "#root .eposodepage-des",
             "lead-image": "#root .ep-info-cover img",
             "content": [],
-            "audio-url": "#root audio"
+            "audio-url": "#root audio source"
         }
     }
 ]
