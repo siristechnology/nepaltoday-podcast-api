@@ -19,4 +19,12 @@ describe('podcast-crawler', () => {
 
 		expect(podcasts.length).toBeGreaterThan(0)
 	})
+
+	it('Nepali Bahas podcast can be scraped', async () => {
+		const source = SourceConfig.filter((s) => s.sourceId === 'NepaliRadioNetwork')
+
+		const podcasts = await PodcastCrawler(source, { headless: true, articleUrlLength: 3 })
+
+		expect(podcasts.length).toBeGreaterThan(0)
+	})
 })

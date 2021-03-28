@@ -198,5 +198,30 @@
             "content": [],
             "audio-url": "div[class^='player_player'] audio"
         }
+    },
+    {
+        "sourceId": "NepaliRadioNetwork",
+        "sourceName": "Nepali Radio Network",
+        "imageUrl": "/assets/logos/NRN-Network.png",
+        "weight": 10,
+        "pages": [
+            {
+                "programId": "nepalibahas",
+                "program": "नेपाली बहस",
+                "programInEnglish": "Nepali Bahas",
+                "weight": 10,
+                "url": "https://podcasts.hamropatro.com/podcast/5739206427017216",
+                "imageUrl": "https://storage.googleapis.com/hamropatro-storage/assets/5715490586492928/images/6cace85f-9fd3-4692-88d5-65ea7d605138.png",
+                "category": "Politics",
+                "link-selector": "div[class^='podcast_episode_list'] div a"
+            }
+        ],
+        "article-detail-selectors": {
+            "title": "span[class^='episodePage_headingContent__title__']",
+            "excerpt": "div[class^='episodePage_textContent__']",
+            "lead-image": "div[class^='episodePage_podImage__'] > img",
+            "content": [],
+            "audio-url": "div[class^='player_player'] audio"
+        }
     }
 ]
