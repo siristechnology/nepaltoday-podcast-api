@@ -24,9 +24,9 @@ module.exports = {
 					.sort({ _id: -1 })
 					.limit(category.count || 20)
 
-				const totalWeights = await calculateTotalWeights([..._podcasts], args.criteria.nid)
+				const podcastWithWeights = await calculateTotalWeights([..._podcasts], args.criteria.nid)
 
-				return totalWeights
+				return podcastWithWeights
 			})
 
 			const podcasts = await Promise.all(promises)

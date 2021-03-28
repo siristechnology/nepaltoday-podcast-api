@@ -14,6 +14,12 @@ const Podcast = mongoose.model(
 		category: String,
 		programId: String,
 		publisherId: String,
+		weights: {
+			publisher: Number,
+			category: Number,
+			date: Number,
+			user: Number,
+		},
 		createdDate: { type: Date, default: Date.now },
 		modifiedDate: { type: Date, default: Date.now },
 		createdAt: { type: Date, expires: expiryTime, default: Date.now },
