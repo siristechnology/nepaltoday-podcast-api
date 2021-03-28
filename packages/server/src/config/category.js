@@ -1,8 +1,8 @@
 const categories = [
 	{ name: 'Headline', weight: 10 },
-	{ name: 'Politics', weight: 9 },
+	{ name: 'Politics', weight: 10 },
 	{ name: 'Entertainment', weight: 8 },
-	{ name: 'News', weight: 9 },
+	{ name: 'News', weight: 10 },
 	{ name: 'Business', weight: 7 },
 	{ name: 'Social', weight: 6 },
 	{ name: 'Sports', weight: 8 },

@@ -16,6 +16,7 @@ const Podcast = mongoose.model(
 		publisherId: String,
 		weights: {
 			publisher: Number,
+			program: Number,
 			category: Number,
 			date: Number,
 			user: Number,

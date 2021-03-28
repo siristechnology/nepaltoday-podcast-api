@@ -3,7 +3,7 @@
         "sourceId": "playerfm",
         "sourceName": "Player FM",
         "imageUrl": "/assets/logos/playerfm.png",
-        "weight": 9,
+        "weight": 8,
         "pages": [
             {
                 "programId": "HamroAwaz",

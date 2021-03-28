@@ -8,7 +8,12 @@ const calculateTotalWeights = async (podcasts, nid) => {
 		podcast.weights.date = getDateWeight(podcast.createdDate)
 		let userWeight = userSpecificWeight.filter((x) => x.category == podcast.category)[0]
 		if (!userWeight) userWeight = { weight: 0 }
-		podcast.totalWeight = (podcast.weights.publisher || 0) + (podcast.weights.category || 0) + (podcast.weights.date || 0) + userWeight.weight
+		podcast.totalWeight =
+			(podcast.weights.publisher || 0) +
+			(podcast.weights.program || 0) +
+			(podcast.weights.category || 0) +
+			(podcast.weights.date || 0) +
+			userWeight.weight
 		podcast.totalWeight = isNaN(podcast.totalWeight) ? 0 : podcast.totalWeight
 		return podcast
 	})

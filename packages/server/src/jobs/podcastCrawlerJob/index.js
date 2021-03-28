@@ -2,8 +2,8 @@ const SourceConfig = require('../../config/source-config.json')
 const PodcastCrawler = require('news-crawler')
 const uploadHelper = require('./uploadHelper')
 const { Podcast } = require('../../db-service/database/mongooseSchema')
-
 const getPodcastDurationInSeconds = require('./getPodcastDurationInSeconds')
+const { assignWeights } = require('./helper')
 
 module.exports = async function () {
 	try {
@@ -11,7 +11,7 @@ module.exports = async function () {
 		podcasts = podcasts.filter((x) => x.audioUrl.length > 5)
 
 		for (const podcast of podcasts) {
-			const podcastSaved = await isPodcaseInDb(podcast.audioUrl)
+			const podcastSaved = await isPodcastInDb(podcast.audioUrl)
 			if (!podcastSaved) {
 				try {
 					const s3Response = await uploadHelper(podcast)
@@ -30,7 +30,7 @@ module.exports = async function () {
 	}
 }
 
-const isPodcaseInDb = async (link) => {
+const isPodcastInDb = async (link) => {
 	const podcastRes = await Podcast.findOne({ originalAudioUrl: link }).lean()
 	return podcastRes && podcastRes.link
 }
@@ -46,5 +46,7 @@ const savePodcastToDatabase = async (podcast, s3Response, durationInSeconds) => 
 		publisherId: podcast.sourceId,
 	}
 
-	await Podcast.create(podcastObj)
+	const podcastWithWeight = assignWeights([podcastObj])
+
+	await Podcast.create(podcastWithWeight)
 }
