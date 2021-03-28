@@ -108,7 +108,7 @@
                 "url": "https://ujyaaloonline.com/radio-program-detail/kayakairan",
                 "imageUrl": "https://unncdn.prixacdn.net/media/Kayakairan_podcast.jpg",
                 "category": "News",
-                "link-selector": "section > div > div > div > div > div > div > div > div > h4 > a"
+                "link-selector": "body > section div h4 > a"
             },
             {
                 "programId": "DeshPradesh",
@@ -142,8 +142,8 @@
             }
         ],
         "article-detail-selectors": {
-            "title": "section > div > div > div > div > div > h3",
-            "excerpt": "section > div > div > div > div.blog-details > h1",
+            "title": "body > section .blog-details h1",
+            "excerpt": "body > section .main-content .row.bg-white > div:nth-child(2)",
             "lead-image": "section > div > div > div > div > div > img",
             "content": [],
             "audio-url": "div > div.jp-details > a"
