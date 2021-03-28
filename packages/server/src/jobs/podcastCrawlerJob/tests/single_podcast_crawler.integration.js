@@ -13,7 +13,7 @@ describe('podcast-crawler', () => {
 	})
 
 	it('MiliJuli Nepali podcast can be scraped', async () => {
-		const source = SourceConfig.filter((s) => s.sourceId === 'bbcmedia')
+		const source = SourceConfig.filter((s) => s.sourceId === 'bbcmedia' && s.pages.some((p) => p.programId === 'MiliJuliNepali'))
 
 		const podcasts = await PodcastCrawler(source, { headless: true, articleUrlLength: 3 })
 
@@ -22,6 +22,14 @@ describe('podcast-crawler', () => {
 
 	it('Nepali Bahas podcast can be scraped', async () => {
 		const source = SourceConfig.filter((s) => s.sourceId === 'NepaliRadioNetwork')
+
+		const podcasts = await PodcastCrawler(source, { headless: true, articleUrlLength: 3 })
+
+		expect(podcasts.length).toBeGreaterThan(0)
+	})
+
+	it('Nepal Sandarbha podcast can be scraped', async () => {
+		const source = SourceConfig.filter((s) => s.sourceId === 'bbcmedia' && s.pages.some((p) => p.programId === 'NepalSandarbha'))
 
 		const podcasts = await PodcastCrawler(source, { headless: true, articleUrlLength: 3 })
 
