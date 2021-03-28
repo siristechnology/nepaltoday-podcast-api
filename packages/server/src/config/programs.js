@@ -14,4 +14,4 @@ SourceConfig.forEach((pub) => {
 	})
 })
 
-module.exports = Programs
+module.exports = Programs.sort((a, b) => b.weight - a.weight)

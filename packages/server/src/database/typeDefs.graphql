@@ -12,6 +12,7 @@ type Program {
 	category: String!
 	podcasts: [Podcast]
 	publisher: Publisher
+	weight: Float
 }
 
 type Podcast {
