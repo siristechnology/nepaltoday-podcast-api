@@ -35,7 +35,9 @@ module.exports = {
 			podcastFlattened = podcastFlattened.sort((a, b) => b.totalWeight - a.totalWeight)
 
 			const podcastList = podcastFlattened.map((podcast) => {
-				const publisher = SourceConfig.find((x) => x.sourceId === podcast.publisherId)
+				const publisher = SourceConfig.find(
+					(x) => x.sourceId === podcast.publisherId && x.pages.some((p) => p.programId === podcast.programId),
+				)
 				podcast.publisher = {
 					id: publisher.sourceId,
 					title: publisher.sourceName,
