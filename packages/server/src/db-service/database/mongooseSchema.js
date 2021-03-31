@@ -5,7 +5,7 @@ const expiryTime = 604800
 const Podcast = mongoose.model(
 	'Podcast',
 	new Schema({
-		title: { type: String, required: true },
+		title: { type: String, unique: true, required: true },
 		description: String,
 		imageUrl: String,
 		originalAudioUrl: { type: String, required: true, unique: true },
