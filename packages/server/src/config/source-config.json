@@ -95,10 +95,10 @@
                 "program": "कोरोना क्याप्सुल",
                 "programInEnglish": "Corona Capsule",
                 "weight": 10,
-                "url": "https://ujyaaloonline.com/radio-program-detail/Corona-capsule",
+                "url": "https://ujyaaloonline.com/radio-program-detail/corona-capsule-phase-III",
                 "imageUrl": "https://unncdn.prixacdn.net/media/corona_capsule_5mi.jpg",
                 "category": "Health",
-                "link-selector": "section > div > div > div > div > div > div > div > div > h4 > a"
+                "link-selector": "body > section div h4 > a"
             },
             {
                 "programId": "Kayakairan",
