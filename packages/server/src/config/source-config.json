@@ -32,7 +32,7 @@
                 "weight": 6,
                 "url": "https://player.fm/series/awr-nepali-nepalese-sabbath-school",
                 "imageUrl": "https://cdn.player.fm/images/2017611/series/3jaUK7PV40aWv1ub/512.jpg",
-                "category": "Knowledge",
+                "category": "Education",
                 "link-selector": "main > div > article > div.headline > div.info > header > h3 > span > a"
             },
             {
@@ -57,7 +57,7 @@
     {
         "sourceId": "Ujyalo",
         "sourceName": "Ujyalo",
-        "imageUrl": "/assets/logos/ujyalo.png",
+        "imageUrl": "/assets/logos/ujyalo-1.png",
         "weight": 10,
         "pages": [
             {
