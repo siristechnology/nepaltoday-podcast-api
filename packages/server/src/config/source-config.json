@@ -205,6 +205,31 @@
         }
     },
     {
+        "sourceId": "hamropatro",
+        "sourceName": "Hamro Patro",
+        "imageUrl": "/assets/logos/hamropatro.png",
+        "weight": 10,
+        "pages": [
+            {
+                "programId": "hamronepal",
+                "program": "हाम्रो नेपाल हामी नेपाली",
+                "programInEnglish": "Hamro Nepal Hami Nepali",
+                "weight": 10,
+                "url": "https://podcasts.hamropatro.com/podcast/5663085530447872",
+                "imageUrl": "https://storage.googleapis.com/hamropatro-storage/assets/5769928858664960/images/75a66139-85cf-4101-a835-5787ad1543a2.jpg",
+                "category": "Social",
+                "link-selector": "div[class^='podcast_episode_list'] div a"
+            }
+        ],
+        "article-detail-selectors": {
+            "title": "span[class^='episodePage_headingContent__title__']",
+            "excerpt": "div[class^='episodePage_textContent__']",
+            "lead-image": "div[class^='episodePage_podImage__'] > img",
+            "content": [],
+            "audio-url": "div[class^='player_player'] audio"
+        }
+    },
+    {
         "sourceId": "bbcmedia",
         "sourceName": "BBC Media",
         "imageUrl": "/assets/logos/bbc.png",
@@ -267,7 +292,7 @@
                 "weight": 10,
                 "url": "https://castbox.fm/channel/बीबीसी-नेपाली-पडकास्ट-id575858?country=us",
                 "imageUrl": "https://is3-ssl.mzstatic.com/image/thumb/Podcasts113/v4/b9/55/9c/b9559c48-4993-7d0d-4eea-6006de8df5a2/mza_5549070501079435230.jpg/400x400bb.jpg",
-                "category": "Social",
+                "category": "Politics",
                 "link-selector": "#trackListCon_list .trackRowBig-con > a"
             }
         ],
