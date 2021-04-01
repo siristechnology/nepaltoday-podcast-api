@@ -38,22 +38,24 @@ module.exports = {
 				const publisher = SourceConfig.find(
 					(x) => x.sourceId === podcast.publisherId && x.pages.some((p) => p.programId === podcast.programId),
 				)
-				podcast.publisher = {
-					id: publisher.sourceId,
-					title: publisher.sourceName,
-					imageUrl: process.env.SERVER_BASE_URL + publisher.imageUrl,
+				if (publisher) {
+					podcast.publisher = {
+						id: publisher.sourceId,
+						title: publisher.sourceName,
+						imageUrl: process.env.SERVER_BASE_URL + publisher.imageUrl,
+					}
+					const program = publisher.pages.find((p) => p.programId === podcast.programId)
+					podcast.program = {
+						id: program.programId,
+						title: program.program,
+						imageUrl: program.imageUrl,
+						category: program.category,
+					}
+					return podcast
 				}
-				const program = publisher.pages.find((p) => p.programId === podcast.programId)
-				podcast.program = {
-					id: program.programId,
-					title: program.program,
-					imageUrl: program.imageUrl,
-					category: program.category,
-				}
-				return podcast
 			})
 
-			return podcastList
+			return podcastList.filter((p) => p)
 		},
 
 		getAllPrograms: async () => {
