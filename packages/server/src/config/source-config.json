@@ -68,17 +68,7 @@
                 "url": "https://ujyaaloonline.com/radio-program-detail/sikdai-sikaudai",
                 "imageUrl": "https://unncdn.prixacdn.net/media/Sidai_sikaudai_Nepali.jpg",
                 "category": "Education",
-                "link-selector": "section > div > div > div > div > div > div > div > div > h4 > a"
-            },
-            {
-                "programId": "HamroKhagol",
-                "program": "हाम्रो खगोल",
-                "programInEnglish": "Hamro Khagol",
-                "weight": 6,
-                "url": "https://ujyaaloonline.com/radio-program-detail/Hamro-Khagol",
-                "imageUrl": "https://unncdn.prixacdn.net/media/118472175_2821647594741496_4790647017389739716_n.jpg",
-                "category": "Social",
-                "link-selector": "section > div > div > div > div > div > div > div > div > h4 > a"
+                "link-selector": "body > section div h4 > a"
             },
             {
                 "programId": "Bewasayaka",
@@ -88,7 +78,7 @@
                 "url": "https://ujyaaloonline.com/radio-program-detail/ByabasayaKa_lagi_Bank",
                 "imageUrl": "https://unncdn.prixacdn.net/media/Bank_for_business_podcast.jpg",
                 "category": "Business",
-                "link-selector": "section > div > div > div > div > div > div > div > div > h4 > a"
+                "link-selector": "body > section div h4 > a"
             },
             {
                 "programId": "CoronaCapsule",
@@ -131,6 +121,26 @@
                 "link-selector": "body > section div h4 > a"
             },
             {
+                "programId": "Bulbul",
+                "program": "बुलबुल",
+                "programInEnglish": "Bulbul",
+                "weight": 10,
+                "url": "https://ujyaaloonline.com/radio-program-detail/Bulbul",
+                "imageUrl": "https://unncdn.prixacdn.net/media/Bul_bul_new.jpg",
+                "category": "Entertainment",
+                "link-selector": "body > section div h4 > a"
+            },
+            {
+                "programId": "badalidonepal",
+                "program": "बदलिंदो नेपाल",
+                "programInEnglish": "Badalido Nepal",
+                "weight": 10,
+                "url": "https://ujyaaloonline.com/radio-program-detail/badalido-nepal",
+                "imageUrl": "https://unncdn.prixacdn.net/media/Badlindo_Nepal_Ujyaalo_Radio_Network.jpg",
+                "category": "News",
+                "link-selector": "body > section div h4 > a"
+            },
+            {
                 "programId": "DeshPradesh",
                 "program": "देश परदेश (अडियाे)",
                 "programInEnglish": "Desh Pradesh",
@@ -138,7 +148,7 @@
                 "url": "https://ujyaaloonline.com/radio-program-detail/desh-paradesh-radio-program",
                 "imageUrl": "https://unncdn.prixacdn.net/media/Desh_paradesh_for_radio.jpg",
                 "category": "Social",
-                "link-selector": "section > div > div > div > div > div > div > div > div > h4 > a"
+                "link-selector": "body > section div h4 > a"
             },
             {
                 "programId": "SadakRaSawari",
@@ -148,7 +158,7 @@
                 "url": "https://ujyaaloonline.com/radio-program-detail/sadak-ra-sawari",
                 "imageUrl": "https://unncdn.prixacdn.net/media/sadak_sawari_new.jpg",
                 "category": "Social",
-                "link-selector": "section > div > div > div > div > div > div > div > div > h4 > a"
+                "link-selector": "body > section div h4 > a"
             },
             {
                 "programId": "AjarAmarGeetharu",
@@ -157,8 +167,8 @@
                 "weight": 7,
                 "url": "https://ujyaaloonline.com/radio-program-detail/azar-amar-geet",
                 "imageUrl": "https://unncdn.prixacdn.net/media/ajar_amar_2.jpg",
-                "category": "Songs",
-                "link-selector": "section > div > div > div > div > div > div > div > div > h4 > a"
+                "category": "Entertainment",
+                "link-selector": "body > section div h4 > a"
             }
         ],
         "article-detail-selectors": {
