@@ -111,6 +111,26 @@
                 "link-selector": "body > section div h4 > a"
             },
             {
+                "programId": "ShrutiSambegh",
+                "program": "श्रुति संवेग",
+                "programInEnglish": "Shruti Sambegh",
+                "weight": 10,
+                "url": "https://ujyaaloonline.com/radio-program-detail/Shruti-sambegh",
+                "imageUrl": "https://unncdn.prixacdn.net/media/Shruti_sambeg_new.jpg",
+                "category": "Entertainment",
+                "link-selector": "body > section div h4 > a"
+            },
+            {
+                "programId": "NepalKhabar",
+                "program": "नेपाल खबर",
+                "programInEnglish": "Nepal Khabar",
+                "weight": 10,
+                "url": "https://ujyaaloonline.com/radio-program-detail/Nepal-khabar",
+                "imageUrl": "https://unncdn.prixacdn.net/media/Nepal_Khabar_UNn.jpg",
+                "category": "News",
+                "link-selector": "body > section div h4 > a"
+            },
+            {
                 "programId": "DeshPradesh",
                 "program": "देश परदेश (अडियाे)",
                 "programInEnglish": "Desh Pradesh",
