@@ -303,5 +303,30 @@
             "content": [],
             "audio-url": "#root audio source"
         }
+    },
+    {
+        "sourceId": "ted",
+        "sourceName": "TED Talks",
+        "imageUrl": "/assets/logos/ted.png",
+        "weight": 10,
+        "pages": [
+            {
+                "programId": "TEDTalksDaily",
+                "program": "TED Talks Daily",
+                "programInEnglish": "TED Talks Daily",
+                "weight": 10,
+                "url": "https://castbox.fm/channel/TED-Talks-Daily-id4541?country=us",
+                "imageUrl": "https://is5-ssl.mzstatic.com/image/thumb/Podcasts124/v4/8c/da/c9/8cdac9f2-b488-a9c4-e611-2a677fa59ae2/mza_3718282663413307677.png/400x400bb.jpg",
+                "category": "Education",
+                "link-selector": "#trackListCon_list .trackRowBig-con > a"
+            }
+        ],
+        "article-detail-selectors": {
+            "title": "#root .ep-info-box > h1",
+            "excerpt": "#root .eposodepage-des",
+            "lead-image": "#root .ep-info-cover img",
+            "content": [],
+            "audio-url": "#root audio source"
+        }
     }
 ]
