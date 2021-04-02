@@ -1,7 +1,6 @@
 /* eslint-disable eqeqeq */
 const firebase = require('firebase')
 const _ = require('lodash')
-const { categories } = require('../config/category')
 const logger = require('../config/logger')
 const SourceConfig = require('../config/source-config.json')
 const Programs = require('../config/programs')
@@ -12,29 +11,25 @@ const { calculateTotalWeights } = require('./calculateTotalWeights')
 module.exports = {
 	Query: {
 		getTopPodcasts: async (parent, args) => {
-			args.criteria = args.criteria || {}
-			args.criteria.categories = args.criteria.categories || categories
-			args.criteria.nid = args.criteria.nid || ''
-			const promises = args.criteria.categories.map(async (category) => {
-				const _podcasts = await Podcast.find({
-					category: category.name,
-					audioUrl: { $ne: null },
-				})
-					.lean()
-					.sort({ _id: -1 })
-					.limit(category.count || 20)
+			const agg = Podcast.aggregate([
+				{ $sort: { _id: -1, createdDate: -1 } },
+				{
+					$group: {
+						_id: '$programId',
+						latestPodcast: { $first: '$$ROOT' },
+					},
+				},
+			])
 
-				const podcastWithWeights = await calculateTotalWeights([..._podcasts], args.criteria.nid)
+			let podcasts = []
+			for await (const pod of agg) {
+				podcasts.push(pod.latestPodcast)
+			}
 
-				return podcastWithWeights
-			})
+			const podcastWithWeights = await calculateTotalWeights(podcasts)
+			const podcastsSorted = podcastWithWeights.sort((a, b) => b.totalWeight - a.totalWeight)
 
-			const podcasts = await Promise.all(promises)
-
-			let podcastFlattened = _.flatten(podcasts)
-			podcastFlattened = podcastFlattened.sort((a, b) => b.totalWeight - a.totalWeight)
-
-			const podcastList = podcastFlattened.map((podcast) => {
+			const podcastsFinalList = podcastsSorted.map((podcast) => {
 				const publisher = SourceConfig.find(
 					(x) => x.sourceId === podcast.publisherId && x.pages.some((p) => p.programId === podcast.programId),
 				)
@@ -55,7 +50,7 @@ module.exports = {
 				}
 			})
 
-			return podcastList.filter((p) => p)
+			return podcastsFinalList.filter((p) => p)
 		},
 
 		getAllPrograms: async () => {

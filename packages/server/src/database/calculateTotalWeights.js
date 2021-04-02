@@ -1,19 +1,14 @@
 const moment = require('moment')
-const { calculateUserSpecificWeight } = require('./../db-service/UserDbService')
 
-const calculateTotalWeights = async (podcasts, nid) => {
-	const userSpecificWeight = await calculateUserSpecificWeight(nid)
+const calculateTotalWeights = async (podcasts) => {
 	const podcastWithWeights = podcasts.map((podcast) => {
 		podcast.weights = podcast.weights || {}
 		podcast.weights.date = getDateWeight(podcast.createdDate)
-		let userWeight = userSpecificWeight.filter((x) => x.category == podcast.category)[0]
-		if (!userWeight) userWeight = { weight: 0 }
 		podcast.totalWeight =
 			(podcast.weights.publisher || 0) +
 			(podcast.weights.program || 0) +
 			(podcast.weights.category || 0) +
-			(podcast.weights.date || 0) +
-			userWeight.weight
+			(podcast.weights.date || 0)
 		podcast.totalWeight = isNaN(podcast.totalWeight) ? 0 : podcast.totalWeight
 		return podcast
 	})
