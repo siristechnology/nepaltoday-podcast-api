@@ -1,40 +1,46 @@
 [
     {
-        "sourceId": "playerfm",
-        "sourceName": "Player FM",
-        "imageUrl": "/assets/logos/playerfm.png",
+        "sourceId": "oar",
+        "sourceName": "Otago Access Radio",
+        "imageUrl": "/assets/logos/oar.png",
         "weight": 8,
         "pages": [
             {
                 "programId": "HamroAwaz",
                 "program": "Hamro Awaz",
                 "programInEnglish": "Hamro Awaz",
-                "weight": 10,
+                "weight": 8,
                 "url": "https://player.fm/series/hamro-awaz",
                 "imageUrl": "https://cdn.player.fm/images/14371807/series/XBW2H7Q9zO8yz4y3/512.jpg",
                 "category": "Social",
                 "link-selector": "main > div > article > div.headline > div.info > header > h3 > span > a"
-            },
+            }
+        ]
+    },
+    {
+        "sourceId": "BojuBajai",
+        "sourceName": "Boju Bajai",
+        "imageUrl": "/assets/logos/boju.png",
+        "weight": 8,
+        "pages": [
             {
                 "programId": "BojuBajai",
                 "program": "Boju Bajai",
                 "programInEnglish": "Boju Bajai",
-                "weight": 8,
+                "weight": 9,
                 "url": "https://player.fm/series/boju-bajai",
                 "imageUrl": "https://cdn.player.fm/images/22084357/series/TIXhWuIqenGZPDIo/512.jpg",
                 "category": "Social",
                 "link-selector": "main > div > article > div.headline > div.info > header > h3 > span > a"
-            },
-            {
-                "programId": "AwrNepali",
-                "program": "AWR Nepali:Nepalese:नेपाली(Sabbath School)",
-                "programInEnglish": "AWR Nepali",
-                "weight": 6,
-                "url": "https://player.fm/series/awr-nepali-nepalese-sabbath-school",
-                "imageUrl": "https://cdn.player.fm/images/2017611/series/3jaUK7PV40aWv1ub/512.jpg",
-                "category": "Education",
-                "link-selector": "main > div > article > div.headline > div.info > header > h3 > span > a"
-            },
+            }
+        ]
+    },
+    {
+        "sourceId": "randomnepali",
+        "sourceName": "Random Nepali",
+        "imageUrl": "/assets/logos/random-nepali.png",
+        "weight": 8,
+        "pages": [
             {
                 "programId": "RandomNepali",
                 "program": "Random Nepali Podcast",
