@@ -27,7 +27,7 @@ module.exports = {
 			}
 
 			const podcastWithWeights = await calculateTotalWeights(podcasts)
-			const podcastsSorted = podcastWithWeights.sort((a, b) => b.totalWeight - a.totalWeight)
+			const podcastsSorted = podcastWithWeights.sort((a, b) => b.createdDate - a.createdDate).sort((a, b) => b.totalWeight - a.totalWeight)
 
 			const podcastsFinalList = podcastsSorted.map((podcast) => {
 				const publisher = SourceConfig.find(
