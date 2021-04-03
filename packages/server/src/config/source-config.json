@@ -73,7 +73,7 @@
                 "weight": 7,
                 "url": "https://ujyaaloonline.com/radio-program-detail/sikdai-sikaudai",
                 "imageUrl": "https://unncdn.prixacdn.net/media/Sidai_sikaudai_Nepali.jpg",
-                "category": "Education",
+                "category": "Social",
                 "link-selector": "body > section div h4 > a"
             },
             {
@@ -323,7 +323,7 @@
                 "weight": 10,
                 "url": "https://castbox.fm/channel/TED-Talks-Daily-id4541?country=us",
                 "imageUrl": "https://is5-ssl.mzstatic.com/image/thumb/Podcasts124/v4/8c/da/c9/8cdac9f2-b488-a9c4-e611-2a677fa59ae2/mza_3718282663413307677.png/400x400bb.jpg",
-                "category": "Education",
+                "category": "Technology",
                 "link-selector": "#trackListCon_list .trackRowBig-con > a"
             }
         ],
