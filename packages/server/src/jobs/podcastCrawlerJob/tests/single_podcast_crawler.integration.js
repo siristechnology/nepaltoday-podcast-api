@@ -47,4 +47,15 @@ describe('podcast-crawler', () => {
 
 		expect(podcasts.length).toBeGreaterThan(0)
 	})
+
+	it('TED Talks podcast can be scraped', async () => {
+		const source = SourceConfig.filter((s) => s.sourceId === 'ted' && s.pages.some((p) => p.programId === 'TEDTalksDaily'))[0]
+		source.pages = source.pages.filter((p) => p.programId === 'TEDTalksDaily')
+
+		const podcasts = await PodcastCrawler([source], { headless: true, articleUrlLength: 3 })
+
+		console.log('printing podcasts', podcasts)
+
+		expect(podcasts.length).toBeGreaterThan(0)
+	})
 })

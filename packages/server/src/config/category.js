@@ -7,7 +7,7 @@ const categories = [
 	{ name: 'Social', weight: 6 },
 	{ name: 'Sports', weight: 8 },
 	{ name: 'Health', weight: 10 },
-	{ name: 'Technology', weight: 5 },
+	{ name: 'Technology', weight: 9 },
 	{ name: 'Agriculture', weight: 4 },
 	{ name: 'Share', weight: 6 },
 ]
