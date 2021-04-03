@@ -48,5 +48,7 @@ const savePodcastToDatabase = async (podcast, s3Response, durationInSeconds) => 
 
 	const podcastWithWeight = assignWeights([podcastObj])
 
-	await Podcast.create(podcastWithWeight)
+	try {
+		await Podcast.create(podcastWithWeight)
+	} catch {}
 }

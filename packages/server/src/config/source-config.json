@@ -15,7 +15,14 @@
                 "category": "Social",
                 "link-selector": "main > div > article > div.headline > div.info > header > h3 > span > a"
             }
-        ]
+        ],
+        "article-detail-selectors": {
+            "title": "div.main-content.episodes > div > div > h2 > a",
+            "excerpt": "div.main-content.episodes > div > div > div.story.cleanslate > div",
+            "lead-image": "div.col-md-3.series-summary > div > div > a > div > img",
+            "content": [],
+            "audio-url": "div.main-content.episodes > div > div > div.main-buttons > div.episode.paused > a"
+        }
     },
     {
         "sourceId": "BojuBajai",
@@ -33,7 +40,14 @@
                 "category": "Social",
                 "link-selector": "main > div > article > div.headline > div.info > header > h3 > span > a"
             }
-        ]
+        ],
+        "article-detail-selectors": {
+            "title": "div.main-content.episodes > div > div > h2 > a",
+            "excerpt": "div.main-content.episodes > div > div > div.story.cleanslate > div",
+            "lead-image": "div.col-md-3.series-summary > div > div > a > div > img",
+            "content": [],
+            "audio-url": "div.main-content.episodes > div > div > div.main-buttons > div.episode.paused > a"
+        }
     },
     {
         "sourceId": "randomnepali",
