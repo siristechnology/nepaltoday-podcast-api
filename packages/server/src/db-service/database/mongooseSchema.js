@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
-const expiryTime = 604800
+const expiryTime = 5184000
 
 const Podcast = mongoose.model(
 	'Podcast',
