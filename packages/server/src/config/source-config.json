@@ -1,5 +1,30 @@
 [
     {
+        "sourceId": "bbcmedia",
+        "sourceName": "BBC Media",
+        "imageUrl": "/assets/logos/bbc.png",
+        "weight": 10,
+        "pages": [
+            {
+                "programId": "GlobalNews",
+                "program": "Global News",
+                "programInEnglish": "Global News",
+                "weight": 8,
+                "url": "https://www.bbc.co.uk/programmes/p02nq0gn/episodes/downloads",
+                "imageUrl": "https://ichef.bbci.co.uk/images/ic/160x90/p085qrzc.jpg",
+                "category": "News",
+                "link-selector": ".programmes-page ul > li .programme__body > h4 > a"
+            }
+        ],
+        "article-detail-selectors": {
+            "title": ".grid-wrapper .island h1",
+            "excerpt": ".programmes-page .grid-wrapper .synopsis-toggle__long p",
+            "lead-image": ".episode-playout a > img",
+            "content": [],
+            "audio-url": "#download-popup-holder ul > li:nth-child(2) > a"
+        }
+    },
+    {
         "sourceId": "oar",
         "sourceName": "Otago Access Radio",
         "imageUrl": "/assets/logos/oar.png",

@@ -1,7 +1,7 @@
 const PodcastCrawler = require('news-crawler')
 const SourceConfig = require('../../../config/source-config.json')
 
-jest.setTimeout(40000)
+jest.setTimeout(180000)
 
 describe('podcast-crawler', () => {
 	it('ToughTalk with Dil Bhusan podcast can be scraped', async () => {
@@ -54,8 +54,30 @@ describe('podcast-crawler', () => {
 
 		const podcasts = await PodcastCrawler([source], { headless: true, articleUrlLength: 3 })
 
-		console.log('printing podcasts', podcasts)
+		expect(podcasts.length).toBeGreaterThan(0)
+	})
+
+	it('Global News podcast can be scraped', async () => {
+		const source = SourceConfig.filter((s) => s.sourceId === 'bbcmedia' && s.pages.some((p) => p.programId === 'GlobalNews'))[0]
+		source.pages = source.pages.filter((p) => p.programId === 'GlobalNews')
+
+		const podcasts = await PodcastCrawler([source], { headless: true, articleUrlLength: 3 })
 
 		expect(podcasts.length).toBeGreaterThan(0)
+	})
+
+	it('All programs can be scraped.', async (done) => {
+		const podcasts = await PodcastCrawler(SourceConfig.slice(0, 1), { headless: true, articleUrlLength: 3 })
+
+		const totalPodcastsByProgram = podcasts.reduce((accumulator, pod) => {
+			accumulator[pod.programId] = (accumulator[pod.programId] || 0) + 1
+			return accumulator
+		}, {})
+
+		for (const [programId, count] of Object.entries(totalPodcastsByProgram)) {
+			if (count < 1) {
+				done.fail(new Error(`No podcasts from "${programId}"`))
+			}
+		}
 	})
 })
