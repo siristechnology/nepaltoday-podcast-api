@@ -11,7 +11,7 @@
                 "programInEnglish": "Global News",
                 "weight": 8,
                 "url": "https://www.bbc.co.uk/programmes/p02nq0gn/episodes/downloads",
-                "imageUrl": "https://ichef.bbci.co.uk/images/ic/160x90/p085qrzc.jpg",
+                "imageUrl": "https://ichef.bbci.co.uk/images/ic/480x270/p085qrzc.jpg",
                 "category": "News",
                 "link-selector": ".programmes-page ul > li .programme__body > h4 > a"
             }
