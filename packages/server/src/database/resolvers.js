@@ -87,6 +87,26 @@ module.exports = {
 			return program
 		},
 
+		searchPodcasts: async (parent, args) => {
+			const { searchTerm } = args
+			const regexTerm = `\\b${searchTerm.toLowerCase()}`
+			const searchRegex = new RegExp(regexTerm, 'gmi')
+
+			const matchingProgramIds = Programs.filter((program) => searchRegex.test(program.title) || searchRegex.test(program.publisher.title)).map(
+				(p) => p.id,
+			)
+
+			const matchingPodcasts = await Podcast.find({
+				$or: [
+					{ title: { $regex: regexTerm, $options: 'gmi' } },
+					{ description: { $regex: regexTerm, $options: 'gmi' } },
+					{ programId: { $in: matchingProgramIds } },
+				],
+			}).lean()
+
+			return populateProgramDetailsInPodcasts(matchingPodcasts)
+		},
+
 		getFmList: async (parent, args, { FM }) => {
 			return fmDetails
 		},
@@ -146,4 +166,25 @@ module.exports = {
 			}
 		},
 	},
+}
+
+const populateProgramDetailsInPodcasts = (podcasts) => {
+	return podcasts.map((podcast) => {
+		const publisher = SourceConfig.find((x) => x.sourceId === podcast.publisherId && x.pages.some((p) => p.programId === podcast.programId))
+		if (publisher) {
+			podcast.publisher = {
+				id: publisher.sourceId,
+				title: publisher.sourceName,
+				imageUrl: process.env.SERVER_BASE_URL + publisher.imageUrl,
+			}
+			const program = publisher.pages.find((p) => p.programId === podcast.programId)
+			podcast.program = {
+				id: program.programId,
+				title: program.program,
+				imageUrl: program.imageUrl,
+				category: program.category,
+			}
+			return podcast
+		}
+	})
 }

@@ -59,6 +59,7 @@ type Query {
 	getFmList: [FM]
 	getMyFavoriteFm(nid: String): [FM]
 	getMyFm(nid: String): MyFm
+	searchPodcasts(searchTerm: String!): [Podcast]
 }
 
 type Response {
