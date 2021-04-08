@@ -29,28 +29,7 @@ module.exports = {
 			const podcastWithWeights = await calculateTotalWeights(podcasts)
 			const podcastsSorted = podcastWithWeights.sort((a, b) => b.createdDate - a.createdDate).sort((a, b) => b.totalWeight - a.totalWeight)
 
-			const podcastsFinalList = podcastsSorted.map((podcast) => {
-				const publisher = SourceConfig.find(
-					(x) => x.sourceId === podcast.publisherId && x.pages.some((p) => p.programId === podcast.programId),
-				)
-				if (publisher) {
-					podcast.publisher = {
-						id: publisher.sourceId,
-						title: publisher.sourceName,
-						imageUrl: process.env.SERVER_BASE_URL + publisher.imageUrl,
-					}
-					const program = publisher.pages.find((p) => p.programId === podcast.programId)
-					podcast.program = {
-						id: program.programId,
-						title: program.program,
-						imageUrl: program.imageUrl,
-						category: program.category,
-					}
-					return podcast
-				}
-			})
-
-			return podcastsFinalList.filter((p) => p)
+			return populateProgramDetailsInPodcasts(podcastsSorted.filter((p) => p))
 		},
 
 		getAllPrograms: async () => {
@@ -89,12 +68,12 @@ module.exports = {
 
 		searchPodcasts: async (parent, args) => {
 			const { searchTerm } = args
-			const regexTerm = `\\b${searchTerm.toLowerCase()}`
+			const regexTerm = `\\b${searchTerm.trim().toLowerCase()}`
 			const searchRegex = new RegExp(regexTerm, 'gmi')
 
-			const matchingProgramIds = Programs.filter((program) => searchRegex.test(program.title) || searchRegex.test(program.publisher.title)).map(
-				(p) => p.id,
-			)
+			const matchingProgramIds = Programs.filter(
+				(program) => searchRegex.test(program.programInEnglish.toLowerCase()) || searchRegex.test(program.publisher.title.toLowerCase()),
+			).map((p) => p.id)
 
 			const matchingPodcasts = await Podcast.find({
 				$or: [
@@ -104,7 +83,7 @@ module.exports = {
 				],
 			}).lean()
 
-			return populateProgramDetailsInPodcasts(matchingPodcasts)
+			return populateProgramDetailsInPodcasts(matchingPodcasts).slice(0, 20)
 		},
 
 		getFmList: async (parent, args, { FM }) => {
