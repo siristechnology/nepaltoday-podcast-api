@@ -5,9 +5,9 @@ const { Podcast } = require('../../db-service/database/mongooseSchema')
 const getPodcastDurationInSeconds = require('./getPodcastDurationInSeconds')
 const { assignWeights } = require('./helper')
 
-module.exports = async function () {
+module.exports = async function (config = SourceConfig) {
 	try {
-		let podcasts = await PodcastCrawler(SourceConfig, { headless: true, articleUrlLength: 3 })
+		let podcasts = await PodcastCrawler(config, { headless: true, articleUrlLength: 3 })
 		podcasts = podcasts.filter((x) => x.audioUrl.length > 5)
 
 		for (const podcast of podcasts) {
