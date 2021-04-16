@@ -32,7 +32,7 @@ module.exports = async function (config = SourceConfig) {
 
 const isPodcastInDb = async (link) => {
 	const podcastRes = await Podcast.findOne({ originalAudioUrl: link }).lean()
-	return podcastRes && podcastRes.link
+	return podcastRes && podcastRes.audioUrl
 }
 
 const savePodcastToDatabase = async (podcast, s3Response, durationInSeconds) => {
