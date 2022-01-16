@@ -4,14 +4,15 @@ on: [push]
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: macos-11
 
     steps:
-      - uses: actions/checkout@v1
-      - name: Use Node.js 14.11.0
-        uses: actions/setup-node@v1
+      - uses: actions/checkout@v2
+      - name: Use Node.js 16
+        uses: actions/setup-node@v2.5.1
         with:
-          node-version: 14.11.0
+          node-version: '16'
+          cache: 'yarn'
 
       - name: yarn install
         run: yarn install --frozen-lockfile
