@@ -31,13 +31,6 @@ type Podcast {
 	modifiedDate: String
 }
 
-type User {
-	name: String!
-	firebaseUid: String!
-	imageUrl: String!
-	provider: String!
-}
-
 type FM {
 	id: String
 	url: String
@@ -65,32 +58,4 @@ type Query {
 type Response {
 	success: Boolean!
 	id: String
-}
-
-input SaveFavorite {
-	nid: String!
-	fmId: String
-}
-
-input PostLikeObj {
-	nid: String
-	articleId: String
-	category: String
-}
-
-input RemoveLikeObj {
-	nid: String
-	articleId: String
-}
-
-input UserLoginInput {
-	name: String
-	firebaseUid: String
-	profileImage: String
-	accessToken: String!
-	provider: String
-}
-
-type Mutation {
-	loginUser(loginInput: UserLoginInput): Response
 }

@@ -27,22 +27,6 @@ const Podcast = mongoose.model(
 	}),
 )
 
-const User = mongoose.model(
-	'User',
-	new Schema({
-		name: { type: String, required: true },
-		firebaseUid: { type: String, unique: true },
-		imageUrl: String,
-		countryCode: String,
-		timeZone: String,
-		ipAddress: String,
-		provider: String,
-		createdDate: { type: Date, default: Date.now },
-		modifiedDate: { type: Date, default: Date.now },
-		status: String,
-	}),
-)
-
 const FavoriteFM = mongoose.model(
 	'FavoriteFM',
 	new Schema({
@@ -52,7 +36,6 @@ const FavoriteFM = mongoose.model(
 )
 
 module.exports = {
-	User,
 	Podcast,
 	FavoriteFM,
 }

@@ -1,5 +1,3 @@
-/* eslint-disable eqeqeq */
-const firebase = require('firebase')
 const _ = require('lodash')
 const logger = require('../config/logger')
 const SourceConfig = require('../config/source-config.json')
@@ -110,38 +108,6 @@ module.exports = {
 			return {
 				allFm: fmDetails,
 				favoriteFm: myFavoriteFm,
-			}
-		},
-	},
-
-	Mutation: {
-		loginUser: async (parent, args, { ipAddress }) => {
-			const { accessToken, provider } = args.loginInput
-
-			if (provider != 'google') throw Error('Only google auth is supported now')
-
-			const credential = firebase.auth.GoogleAuthProvider.credential(null, accessToken)
-			const firebaseRes = await firebase.auth().signInWithCredential(credential)
-			const firebaseUser = await User.findOne({ firebaseUid: firebaseRes.user.uid })
-
-			if (firebaseUser) {
-				return { id: firebaseUser._id, success: true }
-			} else {
-				const response = await User.update(
-					{ firebaseUid: firebaseRes.user.uid },
-					{
-						$set: {
-							name: firebaseRes.user.displayName,
-							firebaseUid: firebaseRes.user.uid,
-							imageUrl: firebaseRes.user.photoURL,
-							provider: credential.providerId,
-							ipAddress,
-						},
-					},
-					{ upsert: true },
-				)
-
-				return { id: response.upserted._id, success: !!response.ok }
 			}
 		},
 	},
