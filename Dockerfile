@@ -1,4 +1,4 @@
-FROM node:14.11.0
+FROM node:16.13.2-slim
 
 RUN apt-get update \
     && apt-get install -y wget gnupg \
@@ -15,13 +15,9 @@ USER root
 
 # Install dependencies
 COPY package.json yarn.lock .yarnrc ./
-
 RUN yarn install --frozen-lockfile --production=true
 
 COPY . .
-
-RUN npm rebuild node-sass
-RUN yarn build
 
 EXPOSE 8080
 
