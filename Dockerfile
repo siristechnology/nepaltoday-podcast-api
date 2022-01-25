@@ -18,6 +18,8 @@ USER root
 COPY package.json yarn.lock .yarnrc ./
 RUN yarn install --frozen-lockfile --production=true
 
+RUN chmod -R o+rwx node_modules/puppeteer/.local-chromium
+
 COPY . .
 
 EXPOSE 8080
